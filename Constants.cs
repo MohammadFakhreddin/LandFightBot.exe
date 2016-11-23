@@ -52,114 +52,12 @@ namespace LandFightBotReborn
                 public static string USER = "user";
             }
         };
-        //public static string REAL_NAME_REGISTER_URL = "users/real-name-register";
-        //public static class REAL_NAME_REGISTER_FIELDS
-        //{
-        //    public static string[] BODY_PARAMS=  new string[]{
-        //        "oldUsername",
-        //        "oldPassword",
-        //        "newUsername",
-        //        "newPassword"
-        //    };
-        //    public static class RESPONCE
-        //    {
-        //        public static string ERR = "err";
-        //        public static string STATUS = "status";
-        //        public static string SUCCESS = "success";
-        //        public static string USERNAME = "username";
-        //        public static string PASSWORD = "password";
-        //    };
-        //};
-        public static string DB_VERSION_URL = "gameDB/db-version";
-        public static class DB_VERSION
-        {
-            public static string[] HEADERS = new string[]
-        {
-        //    "landfighttoken"
-        };
-            public static class RESPONCE
-            {
-                public static string VERSION = "version";
-            }
-        }
-        public static string DB_URL = "gameDB/db";
-        public static class DB
-        {
-            public static string[] HEADERS = new string[]
-        {
-           "landfighttoken"
-        };
-            //The file itself is responce
-        }
 
-
-        public static class SHOP
-        {
-            public static string SHOP_BUY_URL = "shop/buy";
-            public static string SHOP_GET_ITEMS_URL = "shop/shopItems";
-            public static string[] SHOP_GET_HEADERS = new string[] {
-			"landfighttoken"
-		};
-            public static class SHOP_BUY
-            {
-                public static string[] ITEM_BUY_PARAMS = new string[] {
-				/*"landfighttoken",*/"itemId"/*,"username","password"*/
-			};
-                public static class RESPONSE
-                {
-                    public static string SUCCESS = "success";
-                    public static string ERR = "err";
-                    public static string GOLD = "gold";
-                }
-            }
-
-            public static class ITEM_GET_GOLD_BUY
-            {
-                public static string ITEM_ID = "itemId";
-                public static string ITEM_TYPE = "type";
-                public static string ITEM_TITLE = "title";
-                public static string ITEM_GOLD = "gold";
-                public static string ITEM_COST = "money";
-            }
-            public static class ITEM_TYPES
-            {
-                public static int DARK_GOLD_TO_GOLD = 1;
-                public static int MONEY_TO_GOLD = 2;
-            }
-        }
-
-        public static class DECK_CHANGED
-        {
-            public static string DECK_CHANGED_URL = "armory/changeDeck";
-            public static string[] DECK_CHANGED_PARAMS = new string[] {
-			/*"landfighttoken","username","password",*/"newDeckedUnits","unDeckedUnits"
-		};
-            public static class RESPONSE
-            {
-                public static string SUCCESS = "success";
-                public static string CARDS = "userCards";
-                public static string ERR = "err";
-            }
-        }
-
-        public static class BUY_UPGRAGE_UNIT
-        {
-            public static string BUY_UPGRADE_URL = "armory/buy";
-            public static string[] PARAMS = new string[] {/*"landfighttoken","username","password",*/"unitId", "unitLevel" };
-            public static class RESPONSE
-            {
-                public static string SUCCESS = "success";
-                public static string GOLD = "gold";
-                public static string CARD = "cards";
-                //public static string DARK_GOLD = "darkGold";
-                public static string ERR = "err";
-            }
-        }
 
         public static class CHANGE_PASSWORD
         {
             public static string CHANGE_PASSWD_URL = "users/changePassword";
-            public static string[] PARAMS = new string[] {/*"landfighttoken",*/"username", "password", "newPassword" };
+            public static string[] PARAMS = new string[] {"username", "password", "newPassword" };
             public static class RESPONSE
             {
                 public static string SUCCESS = "success";
@@ -168,51 +66,13 @@ namespace LandFightBotReborn
             }
         }
 
-        public static class CHANGE_USER_INFO
-        {
-            public static string CHANGE_USER_INFO_URL = "users/real-name-register";
-            public static string[] PARAMS = new string[] {/*"landfighttoken",*/"oldUsername", "oldPassword", "newUsername", "newPassword" };
-            public static class RESPONSE
-            {
-                public static string SUCCESS = "success";
-                public static string STATUS = "status";
-                public static string USERNAME = "username";
-                public static string PASSWORD = "password";
-                public static string ERR = "err";
-            }
-        }
-
-        public static class GET_USER_FIELDS
-        {
-            public static string GET_USER_URL = "users/currentUser";
-            public static string[] HEAD_PARAMS = new string[] { };
-            public static class RESPONCE
-            {
-                public static string STATUS = "status";
-                //public static string TOKEN = "landfighttoken";
-                public static string ERR = "err";
-                public static string SUCCESS = "success";
-                public static string USER = "user";
-            }
-        }
-
-        public static class PLAYER_PREFS_STRINGS//TODO: change name! AP
-        {
-            public static string USERNAME = "username";
-            public static string PASSWORD = "password";
-            public static string IS_PROFILE_EDITED = "isProfileEdited";//to make sure user won't edit his profile more than 1time
-            public static string HAS_SEEN_TUTORIAL = "hasSeenTutorial";
-        }
-
-        //public static string SOCKET_URL = "ws://landfight.ddns.net:80/socket.io/?EIO=4&transport=websocket";
         public static string SOCKET_URL = "ws://192.99.103.114:80/socket.io/?EIO=4&transport=websocket";
-        //public static string SOCKET_URL = "ws://192.168.1.3:80/socket.io/?EIO=4&transport=websocket";
         public static class SOCKET_FIELDS
         {
             public static string[] PARAMS = new string[]
-        {
-            "landfighttoken"
-        };
+            {
+                "landfighttoken"
+            };
         }
 
         public static class GAME_RESULT
@@ -303,9 +163,6 @@ namespace LandFightBotReborn
         }
         public static class serverMessage
         {
-            //public static string DATA = "data";
-            //public static string SERVER_IP = "server_iP";
-            //public static string SERVER_PORT = "server_port";
             public static class opCodes
             {
                 public static char SEPERATOR = '@';
@@ -349,8 +206,6 @@ namespace LandFightBotReborn
                 public static class REQUEST_NEW_GAME_PARAMS
                 {
                     public static string TOKEN = "session";
-                    //public static string USERNAME = "username";
-                    //public static string PASSWORD = "password";
                 }
                 public static string CANCEL_FIND_GAME = "cancel_find_game";
                 public static string CANCEL_FIND_GAME_ACCEPTED = "cancel_find_game_accepted";
@@ -373,21 +228,15 @@ namespace LandFightBotReborn
                 }
                 public static string USER_ORDER = "user_order";//We send every player move by this order
                 public static string SERVER_ORDER = "server_order";//Server sends us what really happens in game
-                // public static string OPPONENT_NORMAL_ORDER = "opponent_normal_order";//Thease is not going to be checked by server      
-                //public static string CRITICAL_ORDER = "critical_order";//Thease are going to be checked by server
-                // public static string OPPONENT_CRITICAL_ORDER = "opponent_critical_order";//Thease is not going to be checked by server
                 public static string RECONNECT = "reconnect";
                 public static string RECONNECT_REQ_ARRIVE = "reconnect_req_arrive";
-                //public static string REQUEST_GAME_STATUS = "request_game_status";
                 public static string ON_GAME_STATUS_READY = "on_game_status_ready";
-                // public static string GAME_STATUS_RECIEVE = "on_game_status_receive";
                 public static string ON_RECONNECT_FAILED = "on_reconnect_failed";
                 public static string REQUEST_GAME_RULE = "request_game_rule";
                 public static string GAME_RULE_READY = "game_rule_ready";
                 public static string NEW_TOKENS = "new_tokens";
                 public static string ON_PLAYER_RECONNECT_COMPLETE = "on_player_reconnect_complete";
                 public static string CORRECTION = "correction";
-                //public static string ENABLE_USER = "enable_user";
                 public static string PING = "ping";
                 public static string PING_SUC = "ping_suc";
             }

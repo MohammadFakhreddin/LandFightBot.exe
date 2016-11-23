@@ -4,20 +4,77 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LandFightBotReborn.Bot.DataType;
+using LandFightBotReborn.DB;
+using LandFightBotReborn.Network;
+using Newtonsoft.Json;
 
 namespace LandFightBotReborn.Bot
 {
     public class BotManager
     {
-        public static BotManager instance;
+        public User user;
+        public HttpManager www;
+        public MultiplayerController socket;
 
-        public BotManager()
+        public BotManager(int gameMode,string username,string password)
         {
-            if (instance == null) instance = this;
+            this.user = new User(username,password,UnitManager.getAllUnitFeatures());
+            initializeNetwork();
         }
 
+        public BotManager(User user)
+        {
+            this.user = user;
+            initializeNetwork();
+        }
 
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        private void initializeNetwork()
+        {
+            www = new HttpManager(this);
+            socket = new MultiplayerController(this,onRcCallBack,onDCCallBack,onGameIsReady,onGameFinished,
+                onEnemyDCAccepted,onReconnectComplete,onReconnectFailed,onWeakConnection,false,onRuleReady);
+        }
+
+        private void onRuleReady(MultiplayerController.GameInfo info)//TODO must be implemented
+        {
+
+        }
+
+        private void onWeakConnection()//TODO must be implemented
+        {
+
+        }
+
+        private void onReconnectFailed()//TODO must be implemented
+        {
+
+        }
+
+        private void onReconnectComplete(MultiplayerController.ReGameStatus regamestatus)//TODO must be implemented
+        {
+
+        }
+
+        private void onEnemyDCAccepted(MultiplayerController.Bounty bounty)//TODO must be implemented
+        {
+
+        }
+
+        private void onGameFinished(MultiplayerController.Bounty bounty)//TODO must be implemented
+        {
+
+        }
+
+        private void onGameIsReady(bool isready)//TODO must be implemented
+        {
+
+        }
+
+        private void onDCCallBack()//TODO must be implemented
+        {
+
+        }
+
         //what to do when oponent did something.
         private int numberOfMapXColumn = 10;
         private int numberOfMapYRow = 10;

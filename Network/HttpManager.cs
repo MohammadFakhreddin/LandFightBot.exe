@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LitJson;
 using LandFightBotReborn.Bot;
+using System.Net;
+using LandFightBotReborn.Utils;
 
 namespace LandFightBotReborn.Network
 {
-    class HttpManager
-    {
         /// <summary>
         /// By M.Fakhreddin
         /// For request that are not in form of socket conection
@@ -96,5 +97,4 @@ namespace LandFightBotReborn.Network
                 return sessionPart;
             }
         }
-    }
 }

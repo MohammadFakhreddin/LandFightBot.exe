@@ -3,32 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LandFightBotReborn.Bot;
+using LandFightBotReborn.DB;
 
 namespace LandFightBotReborn
 {
     public class Program
     {
         private BotManager botManager ; //for single bot
-        private void start()
-        {
-            //we need the mode 1 for single plager.
-            //int mode = 1;
-            //mode = Console.Read();
-            groupManager(1);
-        }
+        private SQLManager sqlManager;
+        private UnitManager unitManager;
+        private UpgradeRuleManager upgradeRule;
 
-        
-        public groupManager(int mode)
+        public Program()
         {
-            if (mode == 1)
-            {
-                botManager = new BotManager();
-            }
+            sqlManager = new SQLManager();
+            upgradeRule = new UpgradeRuleManager(sqlManager);
+            unitManager = new UnitManager(sqlManager,upgradeRule);
+            botManager = new BotManager(Constants.gameMode.MULTI_PLAYER,"NOOB","SAG");//TODO We must define player cards
         }
 
         static void Main(string[] args)
         {
-            new Program().start();
+            new Program();
         }
     }
 }
