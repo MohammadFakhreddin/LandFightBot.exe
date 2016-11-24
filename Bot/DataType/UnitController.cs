@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LandFightBotReborn.Bot.DataType
 {
-    public class Unit
+    public class UnitController
     {
     }
 }

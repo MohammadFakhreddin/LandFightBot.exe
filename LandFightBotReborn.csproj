@@ -69,8 +69,8 @@
   <ItemGroup>
     <Compile Include="Bot\BotManager.cs" />
     <Compile Include="Bot\DataType\GameDataTypes.cs" />
-    <Compile Include="Bot\DataType\GameElements.cs" />
-    <Compile Include="Bot\DataType\Unit.cs" />
+    <Compile Include="Bot\DataType\GameStatus.cs" />
+    <Compile Include="Bot\DataType\UnitController.cs" />
     <Compile Include="Bot\DataType\User.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DB\SQLManager.cs" />

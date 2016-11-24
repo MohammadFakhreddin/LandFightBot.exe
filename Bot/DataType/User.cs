@@ -73,8 +73,9 @@ namespace LandFightBotReborn.Bot.DataType
         /// </summary>
         private MultiplayerController.GameInfo info;
 
-        public User(string username,string password,List<UnitFeatures> features)
+        public User(int gameMode,string username,string password,List<UnitFeatures> features)
         {
+            this.gameMode = gameMode;
             this.username = username;
             this.password = password;
             this.features = features;
