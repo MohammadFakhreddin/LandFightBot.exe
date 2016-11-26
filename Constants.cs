@@ -8,6 +8,86 @@ namespace LandFightBotReborn
 {
     public class Constants
     {
+        public static class unitIds
+        {
+            public static int BIKHASIAT = 3;
+            public static int RED = 2;
+            public static int BLUE = 1;
+            public static int KOLOCHIOUS = 4;
+            public static int DARMANIOS = 6;
+            public static int SHEILDER = 7;
+            public static int ENERGIOUS = 5;
+            public static int ATISHI = 10;
+            public static int ZIRAKI = 11;
+            public static int BOMBI = 12;
+            public static class SPECIAL
+            {
+                public static int[] SPECIAL_UNITS = new int[] { DARMANIOS, SHEILDER, ATISHI };
+                public static int[] NEED_ALIVE = new int[] { DARMANIOS, SHEILDER };
+                public static int[] DEFENCIVE = new int[] { SHEILDER };
+                public static int[][] NO_EFFECT_ABILITY = new int[][] { new int[] { DARMANIOS, SHEILDER },
+                    new int[] { SHEILDER, SHEILDER }, new int[] { DARMANIOS, DARMANIOS} };
+                //public static int[] LIMITED = new int[] { ATISHI };
+                public static bool contains(int id)
+                {
+                    for (int i = 0; i < SPECIAL_UNITS.Length; i++)
+                    {
+                        if (SPECIAL_UNITS[i] == id)
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+                public static bool needAliveContains(int unitId)
+                {
+                    for (int i = 0; i < NEED_ALIVE.Length; i++)
+                    {
+                        if (NEED_ALIVE[i] == unitId)
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+                public static bool defenceUnitsContains(int unitId)
+                {
+                    for (int i = 0; i < DEFENCIVE.Length; i++)
+                    {
+                        if (unitId == DEFENCIVE[i])
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+                public static bool noAbilityContains(int unitId1,int unitId2)
+                {
+                    for (int i = 0; i < NO_EFFECT_ABILITY.Length; i++)
+                    {
+                        if ((NO_EFFECT_ABILITY[i][0] == unitId1 && NO_EFFECT_ABILITY[i][1] == unitId2)
+                            || (NO_EFFECT_ABILITY[i][1] == unitId1 && NO_EFFECT_ABILITY[i][0] == unitId2))
+                        {
+                            Console.WriteLine("Ability invalid");
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+
+                //public static bool limitedAbilsContains(int unitId)
+                //{
+                //    for (int i = 0; i < LIMITED.Length; i++)
+                //    {
+                //        if (unitId == LIMITED[i])
+                //        {
+                //            return true;
+                //        }
+                //    }
+                //    return false;
+                //}
+            }
+        }
         public static string GAME_NAME = "landFight";
         //public static string GAME_URL = "http://landfight.ddns.net/";
         //public static string GAME_URL = "http://192.99.103.114/";

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
-using Mono.Data.SqliteClient;
+using System.Data.SQLite;
 using System.IO;
 using LandFightBotReborn.Bot.DataType;
 

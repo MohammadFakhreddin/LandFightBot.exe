@@ -1,8 +1,7 @@
 ﻿using System;
-using UnityEngine;
 using System.Collections;
 using System.Data;
-using Mono.Data.SqliteClient;
+using System.Data.SQLite;
 using System.IO;
 
 namespace LandFightBotReborn.DB
@@ -31,7 +30,7 @@ namespace LandFightBotReborn.DB
         {
             string DBLocation = "";
             //TODO Fix db location
-            DBLocation += Application.dataPath + Path.DirectorySeparatorChar + "StreamingAssets" + Path.DirectorySeparatorChar + "Database" + Path.DirectorySeparatorChar;
+            //DBLocation += Application.dataPath + Path.DirectorySeparatorChar + "StreamingAssets" + Path.DirectorySeparatorChar + "Database" + Path.DirectorySeparatorChar;
             DBLocation += DB_NAME + ".db";
             Console.WriteLine("Starting database at location " + DBLocation);
             Console.WriteLine("SQLiter - Opening SQLite Connection at " + DBLocation);
@@ -39,7 +38,7 @@ namespace LandFightBotReborn.DB
             {
                 File.Create(DBLocation);
             }
-            mConnection = new SqliteConnection(("URI=file:" + DBLocation));
+            mConnection = new SQLiteConnection(("URI=file:" + DBLocation));
             mCommand = mConnection.CreateCommand();
         }
 

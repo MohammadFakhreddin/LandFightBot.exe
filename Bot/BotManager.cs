@@ -27,6 +27,7 @@ namespace LandFightBotReborn.Bot
         private int turnTime;
         private int maxTurn;
 
+
         private GameStatus gameStatus; //instancing the instance
         public User user;
         public HttpManager www;
@@ -514,7 +515,7 @@ namespace LandFightBotReborn.Bot
                             {
                                 int damage = hittedUnits[k].damage;
                                 gameStatus.unitMap[i][j].hit(damage);
-                                gameStatus.unitMap[i][j].addAbility(new UnitController.Ability(doer));
+                                gameStatus.unitMap[i][j].addAbility(new Ability(doer));
                                 hittedUnits.RemoveAt(k);
                                 break;
                             }
@@ -1045,7 +1046,7 @@ namespace LandFightBotReborn.Bot
                     //    checkForAddOrRemoveAbility((int)unit.gameMapPosition.x - 1, (int)unit.gameMapPosition.y, false);
                     //}
                     checkLocForAddOrRemoveAbil(unit, false);
-                    unit.killForGameUpdate();
+                    unit.kill();
                 }
             }
             else if (splited[0] == Constants.serverMessage.opCodes.CREATE_ACCEPTED)
@@ -1161,7 +1162,7 @@ namespace LandFightBotReborn.Bot
                     string[] parts = rawHits.Split(Constants.serverMessage.opCodes.HITED_UNITS_PARAMS.PART_SEP);
                     for (int i = 0; i < parts.Length; i++)
                     {
-                        string[] mems = parts[i].Split(Strings.serverMessage.opCodes.HITED_UNITS_PARAMS.MEM_SEP);
+                        string[] mems = parts[i].Split(Constants.serverMessage.opCodes.HITED_UNITS_PARAMS.MEM_SEP);
                         int unitId = int.Parse(mems[0]);
                         int damage = int.Parse(mems[1]);
                         hittedUnits.Add(new HittedUnits(unitId, damage));
@@ -1209,16 +1210,16 @@ namespace LandFightBotReborn.Bot
 
         private void checkLocForAddOrRemoveAbil(UnitController unit,bool isAdd)
         {
-            checkForAddOrRemoveAbility((int)unit.gameMapPosition.x, (int)unit.gameMapPosition.y, isAdd);
+            checkForAddOrRemoveAbility((int)unit.getGameMapPosition().x, (int)unit.getGameMapPosition().y, isAdd);
             if (unit.getFeatures().width > 1)
             {
                 if (unit.getIsAly())
                 {
-                    checkForAddOrRemoveAbility((int)unit.gameMapPosition.x + 1, (int)unit.gameMapPosition.y, isAdd);
+                    checkForAddOrRemoveAbility((int)unit.getGameMapPosition().x + 1, (int)unit.getGameMapPosition().y, isAdd);
                 }
                 else
                 {
-                    checkForAddOrRemoveAbility((int)unit.gameMapPosition.x - 1, (int)unit.gameMapPosition.y, isAdd);
+                    checkForAddOrRemoveAbility((int)unit.getGameMapPosition().x - 1, (int)unit.getGameMapPosition().y, isAdd);
                 }
             }
         }
@@ -1251,11 +1252,12 @@ namespace LandFightBotReborn.Bot
                         checkForAddOrRemoveAbility((int)position.x + 1, (int)position.y, false);
                     }
                     gameStatus.enemyPowerRegen -= (int)features.powerRegen;
-                    gameStatus.myPower += bonusPower;
+                    gameStatus.myPower += features.powerSpawn;
+                    //TODO temporiarrily bonus power is powerspawn change it later.
                 }
                 removeUnitFromMap(features, isAly, position);
                 if (gameStatus.myTurn && (!isAly) && (user.getGameMode() != Constants.gameMode.SINGLE_PLAYER
-                 && Constants.gameMode!=Constants.gameMode.MULTI_PLAYER) && checkForMapLossIsValid)
+                 && user.getGameMode()!=Constants.gameMode.MULTI_PLAYER) && checkForMapLossIsValid)
                     //When check for map loss is invalid
                     //we are putting units by hand for update
                 {
@@ -1366,9 +1368,9 @@ namespace LandFightBotReborn.Bot
                 {
                     int unitId = newUnits[i].unitId;
                     Vector2 mapPos = newUnits[i].pos;
-                    bool isAly = true;
-                    UnitFeatures currentFeature = (UnitFeatures)availableFeatures[unitId];
-                    createNewUnit(currentFeature, mapPos, isAly, false, newUnits[i].level, newUnits[i].assignedId);
+                    bool isAly = !(mapPos.x >= getNumberOfXColumn()/2);
+                    UnitFeatures currentFeature = (UnitFeatures)user.getAvailableFeatures(unitId);
+                    createNewUnit(currentFeature, mapPos, isAly, newUnits[i].level, newUnits[i].assignedId);
                     gameStatus.unitMap[(int)mapPos.x][(int)mapPos.y].setUnitHealth(newUnits[i].health);
                     gameStatus.unitMap[(int)mapPos.x][(int)mapPos.y].setAvailableShots(newUnits[i].remainingShots);
                 }
@@ -1486,7 +1488,7 @@ namespace LandFightBotReborn.Bot
 
         public void onDCCallBack()
         {
-            restartGame();
+            //restartGame();
         }
 
         //public MultiplayerController.ReGameStatus gameStatusGenerator()
@@ -1560,7 +1562,7 @@ namespace LandFightBotReborn.Bot
                                         //if(!Strings.unitIds.SPECIAL.contains(gameStatus.unitMap[x][y].getFeatures().id)) {
                                         if (isSpecial)
                                         {
-                                            targetUnit.addAbility(new UnitController.Ability(gameStatus.unitMap[x][y]));
+                                            targetUnit.addAbility(new Ability(gameStatus.unitMap[x][y]));
                                             //        UnityEngine.Debug.Log("Abil added");
                                         }
                                         if (Constants.unitIds.SPECIAL.needAliveContains(targetUnit.getFeatures().id))
@@ -1571,7 +1573,7 @@ namespace LandFightBotReborn.Bot
                                     }
                                     else
                                     {
-                                        targetUnit.removeAbility(new UnitController.Ability(gameStatus.unitMap[x][y]));
+                                        targetUnit.removeAbility(new Ability(gameStatus.unitMap[x][y]));
                                         //  UnityEngine.Debug.Log("Abil removed");
                                     }
                                     //if(hasInTimeAbility.Contains(gameStatus.unitMap[x][y].getFeatures().id))
@@ -1586,7 +1588,7 @@ namespace LandFightBotReborn.Bot
                 gameStatus.unitMap[x][y].removeAllPlaceBasedAbilities();
                 for (int i = 0; i < localSpecials.Count; i++)
                 {
-                    gameStatus.unitMap[x][y].addAbility(new UnitController.Ability(localSpecials[i]));
+                    gameStatus.unitMap[x][y].addAbility(new Ability(localSpecials[i]));
                 }
             }
         }

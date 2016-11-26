@@ -36,6 +36,12 @@
       <HintPath>..\packages\EngineIoClientDotNet.0.9.22\lib\net45\EngineIoClientDotNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="LitJson">
       <HintPath>dll\LitJson.dll</HintPath>
     </Reference>
@@ -52,6 +58,15 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+      <HintPath>..\packages\System.Data.SQLite.x64.1.0.103\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.103\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.103\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -68,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bot\BotManager.cs" />
+    <Compile Include="Bot\DataType\Ability.cs" />
     <Compile Include="Bot\DataType\GameDataTypes.cs" />
     <Compile Include="Bot\DataType\GameStatus.cs" />
     <Compile Include="Bot\DataType\UnitController.cs" />

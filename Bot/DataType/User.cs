@@ -86,6 +86,17 @@ namespace LandFightBotReborn.Bot.DataType
             return accessToken;
         }
 
+        public UnitFeatures getAvailableFeatures(int unitId)
+        {
+            for (int i = 0; i < features.Count; i++)
+            {
+                if (features[i].id == unitId)
+                {
+                    return features[i];
+                }
+            }
+            return null;
+        }
 
         public void setSession(string accessToken)
         {
