@@ -65,7 +65,7 @@ namespace LandFightBotReborn.Bot.DataType
         private List<UnitInfo> playerCards;
         private int level=1;
         private int gameMode;
-        private string accessToken;
+        private string accessToken="";
         public List<UnitFeatures> features;
 
         /// <summary>
@@ -230,6 +230,16 @@ namespace LandFightBotReborn.Bot.DataType
                     features[i].currentLevel = unitInfo.level;
                 }
             }
+        }
+
+        public string getUsername()
+        {
+            return username;
+        }
+
+        public string getPassword()
+        {
+            return password;
         }
     }
 }

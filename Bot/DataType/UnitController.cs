@@ -282,5 +282,23 @@ namespace LandFightBotReborn.Bot.DataType
             }
             this.gameMapPosition = gameMapPosition;
         }
+
+        public bool attack(Vector2 attackPosition)
+        {
+            if (shotsInTurn < features.shotPerTurn)
+            {
+                shotsInTurn++;
+                return true;
+            }
+            return false;
+        }
+
+        public int callculateDistancePassingPower(Vector2 newPosition)
+        {
+            int distance = (Math.Abs((int)(gameMapPosition.x - newPosition.x))) +
+                           (Math.Abs((int)(gameMapPosition.y - newPosition.y)));
+            int neededMovePower = distance * features.powerMove;
+            return neededMovePower;
+        }
     }
 }

@@ -29,8 +29,8 @@ namespace LandFightBotReborn.DB
         private void onCreate()
         {
             string DBLocation = "";
-            //TODO Fix db location
-            //DBLocation += Application.dataPath + Path.DirectorySeparatorChar + "StreamingAssets" + Path.DirectorySeparatorChar + "Database" + Path.DirectorySeparatorChar;
+            DBLocation += ".."+Path.DirectorySeparatorChar.ToString()+".."+Path.DirectorySeparatorChar.ToString()
+                          + "Database" + Path.DirectorySeparatorChar.ToString();
             DBLocation += DB_NAME + ".db";
             Console.WriteLine("Starting database at location " + DBLocation);
             Console.WriteLine("SQLiter - Opening SQLite Connection at " + DBLocation);
@@ -39,6 +39,7 @@ namespace LandFightBotReborn.DB
                 File.Create(DBLocation);
             }
             mConnection = new SQLiteConnection(("URI=file:" + DBLocation));
+            Console.WriteLine("Creating sqllite connection successful");
             mCommand = mConnection.CreateCommand();
         }
 
