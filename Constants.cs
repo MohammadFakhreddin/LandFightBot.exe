@@ -8,6 +8,7 @@ namespace LandFightBotReborn
 {
     public class Constants
     {
+        public static bool IS_DEVELOPMENT_BUILD = true;
         public static class unitIds
         {
             public static int BIKHASIAT = 3;
@@ -90,8 +91,8 @@ namespace LandFightBotReborn
         }
         public static string GAME_NAME = "landFight";
         //public static string GAME_URL = "http://landfight.ddns.net/";
-        //public static string GAME_URL = "http://192.99.103.114/";
-        public static string GAME_URL = "http://192.168.137.1/";
+        public static string GAME_URL = "http://192.99.103.114/";
+        //public static string GAME_URL = "http://192.168.137.1/";
         //public static string GAME_URL = "http://192.168.1.6/";
         public static class HEADERS
         {

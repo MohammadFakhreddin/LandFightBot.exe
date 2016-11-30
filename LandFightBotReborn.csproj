@@ -68,6 +68,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="websocket-sharp, Version=1.0.2.59611, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WebSocket4Net, Version=0.14.1.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
       <HintPath>..\packages\WebSocket4Net.0.14.1\lib\net45\WebSocket4Net.dll</HintPath>
       <Private>True</Private>
@@ -77,6 +81,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\AI1.cs" />
+    <Compile Include="AI\AIBasic.cs" />
     <Compile Include="Bot\BotManager.cs" />
     <Compile Include="Bot\DataType\Ability.cs" />
     <Compile Include="Bot\DataType\GameDataTypes.cs" />
@@ -91,15 +97,30 @@
     <Compile Include="Network\MultiplayerController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocketIO\Ack.cs" />
+    <Compile Include="SocketIO\Decoder.cs" />
+    <Compile Include="SocketIO\Encoder.cs" />
+    <Compile Include="SocketIO\EnginePacketType.cs" />
+    <Compile Include="SocketIO\JSONObject\JSONObject.cs" />
+    <Compile Include="SocketIO\JSONObject\JSONTemplates.cs" />
+    <Compile Include="SocketIO\JSONObject\VectorTemplates.cs" />
+    <Compile Include="SocketIO\Packet.cs" />
+    <Compile Include="SocketIO\Parser.cs" />
+    <Compile Include="SocketIO\SocketIOComponent.cs" />
+    <Compile Include="SocketIO\SocketIOEvent.cs" />
+    <Compile Include="SocketIO\SocketIOException.cs" />
+    <Compile Include="SocketIO\SocketPacketType.cs" />
     <Compile Include="Utils\Converter.cs" />
+    <Compile Include="Utils\Logger.cs" />
     <Compile Include="Utils\Vector2.cs" />
+    <Compile Include="Utils\Vector3.cs" />
+    <Compile Include="Utils\Vector4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AI\" />
     <Folder Include="Database\" />
     <Folder Include="dll\" />
   </ItemGroup>

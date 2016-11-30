@@ -145,11 +145,11 @@ namespace LandFightBotReborn.Bot.DataType
         {
             //if (!abilityGain.Contains(ability))
             //{
-            Console.WriteLine("Add ability method");
+            Logger.debug("Add ability method");
             if ((abilityGain.Contains(ability) && Constants.unitIds.SPECIAL.needAliveContains(ability.unitId))
                 || Constants.unitIds.SPECIAL.noAbilityContains(features.id, ability.unitId))
             {
-                Console.WriteLine("Cannot add this abil");
+                Logger.debug("Cannot add this abil");
                 return;
             }
             abilityGain.Add(ability);
@@ -164,7 +164,7 @@ namespace LandFightBotReborn.Bot.DataType
                     if (abilityGain[i].unitId == Constants.unitIds.SHEILDER)
                         value *= abilityGain[i].unit.getFeatures().splashDamagePoint;
                     else
-                        Console.WriteLine("Unknown unit detected");
+                        Logger.debug("Unknown unit detected");
             return value;
         }
 
@@ -259,26 +259,26 @@ namespace LandFightBotReborn.Bot.DataType
         public void move(Vector2 gameMapPosition, UnitController[][] unitMap)
         {
             //TODO Check other side
-            unitMap[this.gameMapPosition.x][this.gameMapPosition.y] = null;
-            unitMap[gameMapPosition.x][gameMapPosition.y] = this;
+            unitMap[(int)this.gameMapPosition.x][(int)this.gameMapPosition.y] = null;
+            unitMap[(int)gameMapPosition.x][(int)gameMapPosition.y] = this;
             var numberOfXColumn = parent.getNumberOfXColumn();
             if (features.width > 1)
             {
-                Console.WriteLine("width is more than 1");
+                Logger.debug("width is more than 1");
                 var x = this.gameMapPosition.x;
                 if (isAly)
                     x -= 1;
                 else
                     x += 1;
                 if (((x >= 0) && isAly) || ((x < numberOfXColumn) && !isAly))
-                    unitMap[x][this.gameMapPosition.y] = null;
+                    unitMap[(int)x][(int)this.gameMapPosition.y] = null;
                 x = gameMapPosition.x;
                 if (isAly)
                     x -= 1;
                 else
                     x += 1;
                 if (((x >= 0) && isAly) || ((x < numberOfXColumn) && !isAly))
-                    unitMap[x][gameMapPosition.y] = this;
+                    unitMap[(int)x][(int)gameMapPosition.y] = this;
             }
             this.gameMapPosition = gameMapPosition;
         }

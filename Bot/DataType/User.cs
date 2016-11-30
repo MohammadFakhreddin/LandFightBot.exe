@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using LandFightBotReborn.DB;
 using LandFightBotReborn.Network;
 using LitJson;
+using LandFightBotReborn.Utils;
 
 namespace LandFightBotReborn.Bot.DataType
 {
@@ -178,7 +179,7 @@ namespace LandFightBotReborn.Bot.DataType
             level = int.Parse(rawObj[SERVER_VALUES.LEVEL].ToString());
             playerCards = new List<UnitInfo>();
             JsonData rawCards = rawObj[SERVER_VALUES.CARDS];
-            Console.WriteLine("MyCards:  " + JsonMapper.ToJson(rawCards).ToString());
+            Logger.debug("MyCards:  " + JsonMapper.ToJson(rawCards).ToString());
             for (int i = 0; i < rawCards.Count; i++)
             {
                 UnitInfo info = new UnitInfo();
@@ -190,7 +191,7 @@ namespace LandFightBotReborn.Bot.DataType
         public void fillPlayerCards(JsonData rawCards)
         {
             playerCards = new List<UnitInfo>();
-            Console.WriteLine("MyCards:  " + JsonMapper.ToJson(rawCards).ToString());
+            Logger.debug("MyCards:  " + JsonMapper.ToJson(rawCards).ToString());
             for (int i = 0; i < rawCards.Count; i++)
             {
                 UnitInfo info = new UnitInfo();

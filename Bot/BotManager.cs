@@ -7,6 +7,8 @@ using LandFightBotReborn.DB;
 using LandFightBotReborn.Network;
 using LandFightBotReborn.Utils;
 using LitJson;
+using LandFightBotReborn.AI;
+
 
 namespace LandFightBotReborn.Bot
 {
@@ -16,13 +18,11 @@ namespace LandFightBotReborn.Bot
         private int numberOfMapXColumn = 12;
         private int numberOfMapYRow = 6;
         private int maxPower = 3000; //It must be same with server do not change this;
-        private int basePowerRegen; //TODO
-        private int initialPower; //TODO
-        private int deadLanBonusPower; //TODO
+        private int basePowerRegen;
+        private int initialPower; 
+        private int deadLanBonusPower;
         private int turnTime;
         private int maxTurn;
-
-
         private GameStatus gameStatus; //instancing the instance
         public User user;
         public HttpManager www;
@@ -30,7 +30,7 @@ namespace LandFightBotReborn.Bot
         private string enemyName;
         private Queue<String> recievedMessages;
         private int bonusTime = 0;
-
+        
         /// <summary>
         /// Dirty code for finding attacker
         /// </summary>
@@ -38,35 +38,112 @@ namespace LandFightBotReborn.Bot
 
         private GameNetworkController networkController;
 
-        public BotManager(int gameMode, string username, string password)
+        private AIBasic AI;
+
+        public BotManager(int AINumber,int gameMode, string username, string password)
         {
             user = new User(gameMode, username, password, UnitManager.getAllUnitFeatures());
+            initializeAI(AINumber);
             initializeNetwork();
             login();
         }
 
-        public BotManager(int gameMode, User user)
+        private void initializeAI(int AINumber)
+        {
+            gameStatus = new GameStatus();
+            switch (AINumber)
+            {
+                case 1:
+                    AI = new AI1(gameStatus, create, endTurn, attack, move, numberOfMapXColumn, numberOfMapYRow);
+                    break;
+            }
+        }
+
+        private void attack(int assignedId, int x, int y)
+        {
+            //TODO Implment me
+        }
+
+        private bool move(int assignedId, int newX, int newY)
+        {
+            //TODO Implment me
+            return false;
+        }
+
+        private bool endTurn()
+        {
+            //TODO Implement me
+            return false;
+        }
+
+        private UnitController create(int unitId, int x, int y)
+        {
+            //TODO Implement me
+            return null;
+        }
+
+        public BotManager(int AINumber,int gameMode, User user)
         {
             this.user = user;
+            initializeAI(AINumber);
             initializeNetwork();
+            login();
         }
+
+
 
         private void login()
         {
             string username = user.getUsername();
             string password = user.getPassword();
-            Console.WriteLine("Attempting to login with username:" + username + " and password:" + password);
+            Logger.info("Attempting to login with username:" + username + " and password:" + password);
             NameValueCollection collection = new NameValueCollection();
             string[] userPass = new string[] {username, password};
             for (int i = 0; i < Constants.LOGIN_FIELDS.BODY_PARAMS.Length; i++)
             {
-                collection.Add(Constants.LOGIN_FIELDS.BODY_PARAMS[i],userPass[i]);
+                collection.Add(Constants.LOGIN_FIELDS.BODY_PARAMS[i], userPass[i]);
             }
             WebHeaderCollection headerCollection;
-            JsonData resultBody = www.postRequset(Constants.GAME_URL + "" + Constants.LOGIN_URL,collection,null,null,out headerCollection);
-            string accessToken = www.getSession(headerCollection);
-            Console.WriteLine("Result body is:"+resultBody.ToString());
-            user.setSession(accessToken);
+            JsonData resultBody;
+            Logger.debug("Url is :"+Constants.GAME_URL + "" + Constants.LOGIN_URL);
+            bool suc = www.postRequset(Constants.GAME_URL + "" + Constants.LOGIN_URL, collection, null, null,
+                out resultBody, out headerCollection);
+            if (suc)
+            {
+                bool userFound = bool.Parse(resultBody[Constants.LOGIN_FIELDS.RESPONCE.SUCCESS].ToString());
+                if (userFound)
+                {
+                    string status = resultBody[Constants.LOGIN_FIELDS.RESPONCE.STATUS].ToString();
+                    Logger.info("Login successful Server responce is:\n"+status);
+                    string accessToken = www.getSession(headerCollection);
+                    user.setSession(accessToken);
+                    JsonData userValues = resultBody[Constants.LOGIN_FIELDS.RESPONCE.USER];
+                    user.fillWithRawObj(userValues);
+                    Logger.debug("Attempting to connect to socketServer");
+                    socket.connectToServer(onSocketConnectionComplete,onGameFound);
+                }
+                else
+                {
+                    string error = resultBody[Constants.LOGIN_FIELDS.RESPONCE.ERR].ToString();
+                    Logger.info("Login failed Server responce is:\n" + error);
+                }
+            }
+            else
+            {
+                Logger.info("Login Failed No responce");
+            }
+        }
+
+        private void onGameFound(MultiplayerController.GameInfo info)
+        {
+            user.setGameMode(Constants.gameMode.MULTI_PLAYER, info);
+            Logger.debug("A game is found\n" + "Enemy name is:" + user.getOpponentToken());
+            socket.readyToAccept();
+        }
+
+        private void onSocketConnectionComplete()
+        {
+            Logger.debug("Trying to enter to game pool");
         }
 
         private void initializeNetwork()
@@ -124,7 +201,7 @@ namespace LandFightBotReborn.Bot
             /// <param name="message"></param>
             public void onRcCallBack(string message)
             {
-                Console.WriteLine("Recieved new message:" + message);
+                Logger.debug("Recieved new message:" + message);
                 if (parent.user.getGameMode() == Constants.gameMode.MULTI_PLAYER)
                 {
                     string[] parts = message.Split(Constants.serverMessage.opCodes.ORDER_ID_SEPERATOR);
@@ -170,7 +247,7 @@ namespace LandFightBotReborn.Bot
 
             public void send(string message)
             {
-                Console.WriteLine("Sending:" + message);
+                Logger.debug("Sending:" + message);
                 string[] splited = message.Split(Constants.serverMessage.opCodes.SEPERATOR);
                 parent.socket.sendOrder(playerMessageNum.ToString() + "" +
                                         Constants.serverMessage.opCodes.ORDER_ID_SEPERATOR.ToString() + "" + message);
@@ -235,7 +312,7 @@ namespace LandFightBotReborn.Bot
 
             private void onEndGame(MultiplayerController.Bounty bounty)
             {
-                Console.WriteLine("Game is finished\nBounty is: " + bounty.gold.ToString() + ":" + bounty.xp.ToString());
+                Logger.info("Game is finished\nBounty is: " + bounty.gold.ToString() + ":" + bounty.xp.ToString());
                 if (bounty.state == Constants.serverMessage.events.endGameWinLooseCodes.WIN)
                 {
                     parent.endGame(true, false, false, false, bounty);
@@ -254,7 +331,7 @@ namespace LandFightBotReborn.Bot
                 }
                 else
                 {
-                    Console.WriteLine("Invalid state");
+                    Logger.debug("Invalid state");
                 }
 //                UserManager.instance.user.deleteTokens();
 //                parent.user.updateUserStatistics(bounty);
@@ -273,8 +350,7 @@ namespace LandFightBotReborn.Bot
 
         public void initializeGame()
         {
-            gameStatus = new GameStatus();
-
+            
             gameStatus.gameStarted = false;
 
             gameStatus.unitMap = new UnitController[numberOfMapXColumn][];
@@ -367,13 +443,13 @@ namespace LandFightBotReborn.Bot
 
         private void setUpGameRules(MultiplayerController.GameInfo info)
         {
-            Console.WriteLine("Getting game rules");
+            Logger.debug("Getting game rules");
             maxPower = info.maxPower;
             initialPower = info.initialPower;
             maxTurn = info.maxTurn;
             turnTime = info.turnTime;
             enemyName = info.enemyName;
-            Console.WriteLine("Enemy Name is :  " + enemyName);
+            Logger.debug("Enemy Name is :  " + enemyName);
             basePowerRegen = info.basePowerRegen;
             deadLanBonusPower = info.landBonus;
             gameStatus.myPower = initialPower;
@@ -384,7 +460,7 @@ namespace LandFightBotReborn.Bot
 
 //        public void onReconnectFailed()//TODO Implment later
 //        {
-//            Console.WriteLine("Failed to reconnect");
+//            Logger.debug("Failed to reconnect");
 //            //user.deleteTokens();
 //            restartGame();
 //        }
@@ -411,16 +487,6 @@ namespace LandFightBotReborn.Bot
                     }
                 }
             }
-        }
-
-//        private void multiAnimPartTwoInvoker() {
-//            startMultiplayerStartGameAnimPartTwo(gameStatus.firstTurnIsMine);
-//        }
-
-        private void startMultiplayerStartGameAnimPartTwo(bool myTurn)
-            //Means connection is ready to start the game//TODO Change this
-        {
-            gameStatus.myTurn = myTurn;
         }
 
         private void endGameTurn()
@@ -527,7 +593,7 @@ namespace LandFightBotReborn.Bot
                 }
                 else
                 {
-                    Console.WriteLine("Something is wrong with shots per turn");
+                    Logger.debug("Something is wrong with shots per turn");
                 }
             }
 //                    else
@@ -830,7 +896,7 @@ namespace LandFightBotReborn.Bot
             }
             if (width > 1)
             {
-                Console.WriteLine("Checking unit feature");
+                Logger.debug("Checking unit feature");
                 if (myTurn)
                 {
                     x -= 1;
@@ -871,7 +937,7 @@ namespace LandFightBotReborn.Bot
 //                executerBackgroundProcess = new Thread(BackgroundWorker);
 //                executerBackgroundProcess.Start();
 //            }
-            Console.WriteLine("execute:" + message);
+            Logger.debug("execute:" + message);
             recievedMessages.Enqueue(message);
             execute();
         }
@@ -909,13 +975,14 @@ namespace LandFightBotReborn.Bot
                 {
                     //StartCoroutine(startMultiplayerStartGameAnimPartTwo());
                     gameStatus.firstTurnIsMine = false;
-                    startMultiplayerStartGameAnimPartTwo(gameStatus.firstTurnIsMine);
+                    gameStatus.myTurn = gameStatus.firstTurnIsMine;
                     gameStatus.gameStarted = true;
+                    AI.onEndTurn(gameStatus.myTurn);
                 }
             }
             else if (splited[0] == Constants.serverMessage.opCodes.TURN_FINISHED)
             {
-                Console.WriteLine("Turn is finished");
+                Logger.debug("Turn is finished");
                 if (user.getGameMode() == Constants.gameMode.MULTI_PLAYER) //This part is for ultimate sync with server
                 {
                     string purified = splited[1].Replace("\\", "\"");
@@ -923,6 +990,7 @@ namespace LandFightBotReborn.Bot
                     MultiplayerController.ReGameStatus syncObj = new MultiplayerController.ReGameStatus();
                     syncObj.fillWithRawObj(syncInfo);
                     onReconnectComplete(syncObj);
+                    AI.onEndTurn(gameStatus.myTurn);
                 }
                 else
                 {
@@ -989,6 +1057,7 @@ namespace LandFightBotReborn.Bot
 //                    executeOnMainThread("execute");
 //                    Console.Log(Errors.MAP_SYNC_ISSUE);
 //                }
+                AI.onMove(movingUnit.getAssignedId(), x1, y1, x2, y2);   
             }
             else if (splited[0] == Constants.serverMessage.opCodes.ATTACK_UNIT)
             {
@@ -1025,7 +1094,8 @@ namespace LandFightBotReborn.Bot
                 }
                 attack(attacker, attackedPos, hittedUnits);
 //                }
-                Console.WriteLine("Attack");
+                Logger.debug("Attack");
+                AI.onAttack(attacker.getAssignedId(), (int)attackedPos.x, (int)attackedPos.y, hittedUnits);
                 //redHighlights[(int)attackedPos.x][(int)attackedPos.y].SetActive(true);
                 //attacker.attack(attackedPos,false, onAttackAnimationFinshed);
             }
@@ -1047,19 +1117,20 @@ namespace LandFightBotReborn.Bot
                     isAly = true;
                 }
                 createNewUnit(user.getAvailableFeatures(unitId), mapPos, isAly, level, assignedId);
+                AI.onCreate(assignedId, x1, y1);
             }
-            else if (splited[0] == Constants.serverMessage.opCodes.CLIENT_READY)
-            {
-                if (!gameStatus.gameStarted)
-                {
-                    gameStatus.firstTurnIsMine = false;
-                    //executeOnMainThread("multiAnimPartTwoInvoker");
-                    startMultiplayerStartGameAnimPartTwo(gameStatus.firstTurnIsMine);
-                    gameStatus.gameStarted = true;
-                    //StartCoroutine(startMultiplayerStartGameAnimPartTwo());
-                }
-            }
-            else if (splited[0] == Constants.serverMessage.opCodes.KILL_UNIT)
+            //else if (splited[0] == Constants.serverMessage.opCodes.CLIENT_READY)
+            //{
+            //    if (!gameStatus.gameStarted)
+            //    {
+            //        gameStatus.firstTurnIsMine = false;
+            //        //executeOnMainThread("multiAnimPartTwoInvoker");
+            //        startMultiplayerStartGameAnimPartTwo(gameStatus.firstTurnIsMine);
+            //        gameStatus.gameStarted = true;
+            //        //StartCoroutine(startMultiplayerStartGameAnimPartTwo());
+            //    }
+            //}
+            else if (splited[0] == Constants.serverMessage.opCodes.KILL_UNIT)//TODO Maybe we need to warn AI about this
             {
                 int x = Int32.Parse(splited[1]);
                 int y = Int32.Parse(splited[2]);
@@ -1071,7 +1142,7 @@ namespace LandFightBotReborn.Bot
                 UnitController unit = gameStatus.unitMap[(int) corpsePos.x][(int) corpsePos.y];
                 if (unit != null)
                 {
-                    Console.WriteLine("Some problem \nSolving by force");
+                    Logger.debug("Some problem \nSolving by force");
                     //checkForAddOrRemoveAbility((int)unit.gameMapPosition.x, (int)unit.gameMapPosition.y, false);
                     //if (unit.getFeatures().width > 1)
                     //{
@@ -1088,30 +1159,7 @@ namespace LandFightBotReborn.Bot
                     unit.kill();
                 }
             }
-            else if (splited[0] == Constants.serverMessage.opCodes.CREATE_FAILED)
-            {
-                int x = Int32.Parse(splited[1]);
-                int y = Int32.Parse(splited[2]);
-                Vector2 corpsePos = new Vector2(x, y);
-//                if (user.getGameMode() != Constants.gameMode.MULTI_PLAYER)
-//                {
-//                    corpsePos = mirrorEnemyPosToAlyPos(corpsePos);
-//                }
-                UnitController unit = gameStatus.unitMap[(int) corpsePos.x][(int) corpsePos.y];
-                if (unit != null)
-                {
-                    Console.WriteLine("Some problem \nSolving by force");
-                    //checkForAddOrRemoveAbility((int)unit.gameMapPosition.x, (int)unit.gameMapPosition.y, false);
-                    //if (unit.getFeatures().width > 1)
-                    //{
-                    //    checkForAddOrRemoveAbility((int)unit.gameMapPosition.x + 1, (int)unit.gameMapPosition.y, false);
-                    //    checkForAddOrRemoveAbility((int)unit.gameMapPosition.x - 1, (int)unit.gameMapPosition.y, false);
-                    //}
-                    checkLocForAddOrRemoveAbil(unit, false);
-                    unit.kill();
-                }
-            }
-            else if (splited[0] == Constants.serverMessage.opCodes.CREATE_ACCEPTED)
+            else if (splited[0] == Constants.serverMessage.opCodes.CREATE_ACCEPTED)//TODO Unnessacry need delete for upper opcode reason
             {
                 int x = int.Parse(splited[1]);
                 int y = int.Parse(splited[2]);
@@ -1123,28 +1171,30 @@ namespace LandFightBotReborn.Bot
             {
                 if (!gameStatus.gameStarted)
                 {
-                    Console.WriteLine("Start multi as  first");
+                    Logger.debug("Start multi as  first");
                     gameStatus.firstTurnIsMine = true;
-                    startMultiplayerStartGameAnimPartTwo(gameStatus.firstTurnIsMine);
+                    gameStatus.myTurn = gameStatus.firstTurnIsMine;
                     gameStatus.gameStarted = true;
+                    AI.onEndTurn(gameStatus.myTurn);
                 }
                 else
                 {
-                    Console.WriteLine("Game already is Started");
+                    Logger.debug("Game already is Started");
                 }
             }
             else if (splited[0] == Constants.serverMessage.opCodes.START_MULTI_AS_SECOND)
             {
                 if (!gameStatus.gameStarted)
                 {
-                    Console.WriteLine("Start multi as  second");
+                    Logger.debug("Start multi as  second");
                     gameStatus.firstTurnIsMine = false;
-                    startMultiplayerStartGameAnimPartTwo(gameStatus.myTurn);
                     gameStatus.gameStarted = true;
+                    gameStatus.myTurn = gameStatus.firstTurnIsMine;
+                    AI.onEndTurn(gameStatus.myTurn);
                 }
                 else
                 {
-                    Console.WriteLine("Game already is Started");
+                    Logger.debug("Game already is Started");
                 }
             }
 //            else if (splited[0] == Constants.serverMessage.opCodes.USE_ITEM)
@@ -1174,7 +1224,11 @@ namespace LandFightBotReborn.Bot
                         if (unit != null && unit.getAssignedId() == assignedId)
                         {
                             unitFound = true;
+                            Vector2 lastPos = unit.getGameMapPosition();
+                            int oldX = (int)lastPos.x;
+                            int oldY = (int)lastPos.y;
                             unit.move(new Vector2(x, y), gameStatus.unitMap);
+                            AI.onMove(unit.getAssignedId(), oldX, oldY, x, y);
                             break;
                         }
                     }
@@ -1231,6 +1285,7 @@ namespace LandFightBotReborn.Bot
                     }
                 }
                 hitUnits(hittedUnits, new Vector2(x, y), lastAttacker);
+                AI.onAttack(lastAttacker.getAssignedId(), x, y, hittedUnits);
             }
         }
 
@@ -1255,7 +1310,7 @@ namespace LandFightBotReborn.Bot
         /// <returns></returns>
         private Vector2 mirrorAlyPosToEnemyPos(Vector2 alyPos)
         {
-            int newX = (numberOfMapXColumn / 2 - alyPos.x) + numberOfMapXColumn / 2 - 1;
+            float newX = (numberOfMapXColumn / 2 - alyPos.x) + numberOfMapXColumn / 2 - 1;
             return new Vector2(newX, alyPos.y);
         }
 
@@ -1269,7 +1324,7 @@ namespace LandFightBotReborn.Bot
         /// <returns></returns>
         private Vector2 mirrorEnemyPosToAlyPos(Vector2 enemyPos)
         {
-            int newX = numberOfMapXColumn / 2 - 1 - (enemyPos.x - numberOfMapXColumn / 2);
+            float newX = numberOfMapXColumn / 2 - 1 - (enemyPos.x - numberOfMapXColumn / 2);
             return new Vector2(newX, enemyPos.y);
         }
 
@@ -1351,12 +1406,12 @@ namespace LandFightBotReborn.Bot
                 {
                     if (isInAlyTeretory)
                     {
-                        Console.WriteLine("Looser");
+                        Logger.debug("Looser");
                         endGame(false, false, false, false, null);
                     }
                     else
                     {
-                        Console.WriteLine("Winner");
+                        Logger.debug("Winner");
                         if (networkController != null)
                         {
                             networkController.send(Constants.serverMessage.opCodes.WIN_GAME);
@@ -1394,7 +1449,7 @@ namespace LandFightBotReborn.Bot
             networkController.notifyServerPlayerRecComplete();
             try
             {
-                Console.WriteLine("In onReconnect complete method");
+                Logger.debug("In onReconnect complete method");
                 List<MultiplayerController.ReGameStatus.UnitState> newUnits = newStatus.unitList;
                 int alyLandEndX = newStatus.alyLandEndX;
                 int enemyLandStartX = newStatus.enemyLandStartX;
@@ -1487,7 +1542,7 @@ namespace LandFightBotReborn.Bot
             }
             catch (Exception e)
             {
-                Console.WriteLine("Rec error " + e.Message + "" + e.StackTrace);
+                Logger.debug("Rec error " + e.Message + "" + e.StackTrace);
             }
         }
 
@@ -1499,7 +1554,7 @@ namespace LandFightBotReborn.Bot
         {
             if (alyLandEndX != gameStatus.alyLandEndX)
             {
-                Console.WriteLine("aly land is " + alyLandEndX.ToString());
+                Logger.debug("aly land is " + alyLandEndX.ToString());
                 for (int i = alyLandEndX; i < numberOfMapXColumn / 2; i++)
                 {
                     for (int j = 0; j < numberOfMapYRow; j++)
@@ -1523,7 +1578,7 @@ namespace LandFightBotReborn.Bot
                 {
                     gameStatus.enemyPower = maxPower;
                 }
-                Console.WriteLine("bonus:" + (alyNewDeadLand * deadLanBonusPower).ToString());
+                Logger.debug("bonus:" + (alyNewDeadLand * deadLanBonusPower).ToString());
                 gameStatus.alyLandEndX = alyLandEndX;
             }
         }
@@ -1536,7 +1591,7 @@ namespace LandFightBotReborn.Bot
         {
             if (enemyLandStartX != gameStatus.enemyLandStartX)
             {
-                Console.WriteLine("THis is shitt:  " + enemyLandStartX.ToString());
+                Logger.debug("THis is shitt:  " + enemyLandStartX.ToString());
                 for (int i = (numberOfMapXColumn / 2); i <= enemyLandStartX; i++)
                 {
                     for (int j = 0; j < numberOfMapYRow; j++)
@@ -1694,7 +1749,7 @@ namespace LandFightBotReborn.Bot
 
         private void onWeakConnection()
         {
-            Console.WriteLine("Weak connection detected");
+            Logger.debug("Weak connection detected");
         }
     }
 }

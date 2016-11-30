@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LandFightBotReborn.Utils;
+using System;
 using System.Collections;
 using System.Data;
 using System.Data.SQLite;
@@ -32,14 +33,14 @@ namespace LandFightBotReborn.DB
             DBLocation += ".."+Path.DirectorySeparatorChar.ToString()+".."+Path.DirectorySeparatorChar.ToString()
                           + "Database" + Path.DirectorySeparatorChar.ToString();
             DBLocation += DB_NAME + ".db";
-            Console.WriteLine("Starting database at location " + DBLocation);
-            Console.WriteLine("SQLiter - Opening SQLite Connection at " + DBLocation);
+            Logger.info("Starting database at location " + DBLocation);
+            Logger.info("SQLiter - Opening SQLite Connection at " + DBLocation);
             if (!File.Exists(DBLocation))
             {
                 File.Create(DBLocation);
             }
             mConnection = new SQLiteConnection(("URI=file:" + DBLocation));
-            Console.WriteLine("Creating sqllite connection successful");
+            Logger.info("Creating sqllite connection successful");
             mCommand = mConnection.CreateCommand();
         }
 

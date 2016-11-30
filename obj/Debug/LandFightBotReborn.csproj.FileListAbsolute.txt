@@ -19,3 +19,5 @@ C:\Users\Espadan\Documents\Visual Studio 2012\Projects\LandFightBotReborn\LandFi
 C:\Users\Espadan\Documents\Visual Studio 2012\Projects\LandFightBotReborn\LandFightBotReborn\obj\Debug\LandFightBotReborn.csprojResolveAssemblyReference.cache
 C:\Users\Espadan\Documents\Visual Studio 2012\Projects\LandFightBotReborn\LandFightBotReborn\obj\Debug\LandFightBotReborn.exe
 C:\Users\Espadan\Documents\Visual Studio 2012\Projects\LandFightBotReborn\LandFightBotReborn\obj\Debug\LandFightBotReborn.pdb
+C:\Users\Espadan\documents\visual studio 2012\Projects\LandFightBotReborn\LandFightBotReborn\bin\Debug\websocket-sharp.dll
+C:\Users\Espadan\documents\visual studio 2012\Projects\LandFightBotReborn\LandFightBotReborn\bin\Debug\websocket-sharp.xml

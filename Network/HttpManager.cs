@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LitJson;
 using LandFightBotReborn.Bot;
 using System.Net;
@@ -27,27 +24,37 @@ namespace LandFightBotReborn.Network
             this.player = player;
         }
 
-        public JsonData getRequest(string uri, String[] headerKeys, String[] headerValues,out WebHeaderCollection retHeaders)
+        public bool getRequest(string uri, String[] headerKeys, String[] headerValues,JsonData retBody,out WebHeaderCollection retHeaders)
         {
             string responseString;
-            using (var client = new WebClient())
+            try
             {
-                Dictionary<String, String> headers = new Dictionary<String, String>();
-                if (player.user.getUserToken() != "")
+                using (var client = new WebClient())
                 {
-                    client.ResponseHeaders.Add(Constants.HEADERS.COOKIE, setSession(player.user.getUserToken()));
-                }
-                if (headerKeys != null && headerValues != null && headerKeys.Length > 0 && headerValues.Length > 0)
-                {
-                    for (int i = 0; i < headerKeys.Length; i++)
+                    Dictionary<String, String> headers = new Dictionary<String, String>();
+                    if (player.user.getUserToken() != "")
                     {
-                        client.ResponseHeaders.Add(headerKeys[i] + "", headerValues[i] + "");
+                        client.ResponseHeaders.Add(Constants.HEADERS.COOKIE, setSession(player.user.getUserToken()));
                     }
+                    if (headerKeys != null && headerValues != null && headerKeys.Length > 0 && headerValues.Length > 0)
+                    {
+                        for (int i = 0; i < headerKeys.Length; i++)
+                        {
+                            client.ResponseHeaders.Add(headerKeys[i] + "", headerValues[i] + "");
+                        }
+                    }
+                    responseString = client.DownloadString(uri);
+                    retHeaders = client.ResponseHeaders;
+                    retBody=JsonMapper.ToObject(responseString);
                 }
-                responseString = client.DownloadString(uri);
-                retHeaders = client.ResponseHeaders;
+                return true;
             }
-            return JsonMapper.ToJson(responseString);
+            catch (Exception e)
+            {
+                retHeaders = null;
+                retBody = null;
+            }
+            return false;
         }
 
 
@@ -60,31 +67,45 @@ namespace LandFightBotReborn.Network
         /// </summary>
         /// <param name="uri">reqeset uri</param>
         /// <param name="pairs">Params you want to send</param>
+        /// <param name="headerValues">Header values</param>
+        /// <param name="headerKeys">Header keys</param>
+        /// <param name="retHeaders">Headers which are returned as server responce</param>
         /// <returns></returns>
-        public JsonData postRequset(string uri, NameValueCollection pairs, String[] headerKeys
-            , String[] headerValues,out WebHeaderCollection retHeaders)
+        public bool postRequset(string uri, NameValueCollection pairs, String[] headerKeys
+            , String[] headerValues,out JsonData retBody,out WebHeaderCollection retHeaders)
         {
             byte[] response = null;
-            using (WebClient client = new WebClient())
+            try
             {
-                if (headerKeys != null)
+                using (WebClient client = new WebClient())
                 {
-                    for (int j = 0; j < headerKeys.Length; j++)
+                    if (headerKeys != null)
                     {
-                        //byte[] binaryVal = System.Text.Encoding.ASCII.GetBytes(values[j]);
-                        client.ResponseHeaders.Add(headerKeys[j], headerValues[j]);
+                        for (int j = 0; j < headerKeys.Length; j++)
+                        {
+                            //byte[] binaryVal = System.Text.Encoding.ASCII.GetBytes(values[j]);
+                            client.ResponseHeaders.Add(headerKeys[j], headerValues[j]);
+                        }
                     }
+                    if (player.user.getAccessToken() != "")
+                    {
+                        client.ResponseHeaders[Constants.HEADERS.COOKIE] = setSession(player.user.getAccessToken());
+                    }
+                    response = client.UploadValues(uri, pairs);
+                    retHeaders = client.ResponseHeaders;
                 }
-                if (player.user.getAccessToken() != "")
-                {
-                    client.ResponseHeaders[Constants.HEADERS.COOKIE] = setSession(player.user.getAccessToken());
-                }
-                response = client.UploadValues(uri, pairs);
-                retHeaders = client.ResponseHeaders;
+                string resString = Converter.byteToString(response);
+                //Console.WriteLine("responce string is:" + resString);
+                retBody = JsonMapper.ToObject(resString);
+                return true;
             }
-            string resString = Converter.byteToString(response);
-            JsonData json = JsonMapper.ToJson(resString);
-            return json;
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                retBody = null;
+                retHeaders = null;
+            }
+            return false;
         }
 
 
@@ -92,13 +113,12 @@ namespace LandFightBotReborn.Network
         {
             string rawSession = headers[Constants.HEADERS.SET_COOKIE];
             string session = rawSession.Replace(Constants.HEADERS.SESSION, "").Split(';')[0];
-            Console.WriteLine("Session:" + session);
+            Logger.debug("Session:" + session);
             return session;
         }
 
         public string setSession(string token)
         {
-            //   string sessionKey = Strings.HEADERS.COOKIE;
             string sessionPart = Constants.HEADERS.SESSION + token + ";";
             return sessionPart;
         }
