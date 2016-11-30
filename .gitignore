@@ -1,0 +1,7 @@
+bin/*
+obj/*
+packages.config
+.idea/*
+packages/*
+.vs/*
+landfightbot.v11.suo

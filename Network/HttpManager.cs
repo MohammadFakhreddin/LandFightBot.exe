@@ -95,13 +95,11 @@ namespace LandFightBotReborn.Network
                     retHeaders = client.ResponseHeaders;
                 }
                 string resString = Converter.byteToString(response);
-                //Console.WriteLine("responce string is:" + resString);
                 retBody = JsonMapper.ToObject(resString);
                 return true;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
                 retBody = null;
                 retHeaders = null;
             }
