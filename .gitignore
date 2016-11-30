@@ -5,3 +5,4 @@ packages.config
 packages/*
 .vs/*
 landfightbot.v11.suo
+LandFightReborn.csproj
