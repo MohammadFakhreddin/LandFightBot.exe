@@ -1,5 +1,4 @@
 ﻿using LandFightBotReborn.Bot.DataType;
-using LandFightBotReborn.DB;
 using LandFightBotReborn.Network;
 using System;
 using System.Collections.Generic;
@@ -14,22 +13,20 @@ namespace LandFightBotReborn.AI
     /// </summary>
     public abstract class AIBasic
     {
-        public delegate bool Create(int unitId,int x,int y);
+        public delegate UnitController Create(int unitId,int x,int y);
         public delegate bool EndTurn();
-        public delegate bool Attack(int assignedId,int x,int y);
+        public delegate void Attack(int assignedId,int x,int y);
         public delegate bool Move(int assignedId, int newX, int newY);
 
-        
         protected Create create;
         protected EndTurn endTurn;
         protected Attack attack;
         protected GameStatus gameStatus;
-        protected User user;
         protected Move move;
         protected int mapXColumn;
         protected int mapYRow;
         
-        public AIBasic(GameStatus gameStatus, User user, Create create,EndTurn endTurn,Attack attack,Move move,int mapXColumn,int mapYRow)
+        public AIBasic(GameStatus gameStatus,Create create,EndTurn endTurn,Attack attack,Move move,int mapXColumn,int mapYRow)
         {
             this.gameStatus = gameStatus;
             this.create = create;
@@ -38,7 +35,6 @@ namespace LandFightBotReborn.AI
             this.move = move;
             this.mapXColumn = mapXColumn;
             this.mapYRow = mapYRow;
-            this.user = user;
         }
 
         public abstract void onAttack(int assignedId,int x,int y,List<HittedUnits> hittedUnits);

@@ -1,8 +1,6 @@
-﻿using LandFightBotReborn.Utils;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SQLite;
 
 namespace LandFightBotReborn.DB
 {
@@ -89,7 +87,7 @@ namespace LandFightBotReborn.DB
             if (allUpgradeRules == null || allUpgradeRules.Count == 0)
             {
                 string query = "SELECT * FROM " + UPGRADE_TABLE_NAME + "";
-                SQLiteDataReader mReader = sqlManager.executeReader(query);
+                IDataReader mReader = sqlManager.executeReader(query);
                 List<UpgradeRule> ruleList = new List<UpgradeRule>();
                 if (mReader.Read())
                 {

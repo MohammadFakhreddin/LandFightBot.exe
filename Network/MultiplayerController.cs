@@ -164,7 +164,7 @@ namespace LandFightBotReborn.Network
                 time = int.Parse(obj.GetField("time").ToString());
                 firstTurnIsMine = bool.Parse(obj.GetField("isFirst").ToString());
                 unitList = new List<UnitState>();
-                //Logger.debug("Re game status before units");
+                Logger.debug("Re game status before units");
                 JSONObject rawUnits = obj.GetField("unitList");
                 for (int i = 0; i < rawUnits.Count; i++)
                 {
@@ -172,7 +172,7 @@ namespace LandFightBotReborn.Network
                     newUnit.fillWithRawObj(rawUnits[i]);
                     unitList.Add(newUnit);
                 }
-                //ogger.debug("Re game status parse complete");
+                Logger.debug("Re game status parse complete");
             }
 
             public void fillWithRawObj(JsonData syncInfo)
@@ -187,7 +187,7 @@ namespace LandFightBotReborn.Network
                 time = int.Parse(syncInfo["time"].ToString());
                 firstTurnIsMine = bool.Parse(syncInfo["isFirst"].ToString());
                 unitList = new List<UnitState>();
-                //Logger.debug("Re game status before units");
+                Logger.debug("Re game status before units");
                 JsonData rawUnits = syncInfo["unitList"];
                 for (int i = 0; i < rawUnits.Count; i++)
                 {
@@ -195,7 +195,7 @@ namespace LandFightBotReborn.Network
                     newUnit.fillWithRawObj(rawUnits[i]);
                     unitList.Add(newUnit);
                 }
-                //Logger.debug("Re game status parse complete");
+                Logger.debug("Re game status parse complete");
             }
         }
         /// <summary>
@@ -240,9 +240,9 @@ namespace LandFightBotReborn.Network
 
             private void onServerOrder(SocketIOEvent obj)
             {
-                //Logger.debug("On server order method");
+                Logger.debug("On server order method");
                 string message = obj.data.GetField("message").ToString().Replace("\"", string.Empty);
-                //Logger.debug("Recieved new order:" + message);
+                Logger.debug("Recieved new order:" + message);
                 parent.lastDataTime = 0;
                 onRcCallBack(message);
             }
@@ -284,7 +284,7 @@ namespace LandFightBotReborn.Network
                         Logger.debug("Rconnect data is outdated");
                         return;
                     }
-                    //Logger.debug("Recieved game status:" + obj.data.ToString());
+                    Logger.debug("Recieved game status:" + obj.data.ToString());
                     ReGameStatus gameStatus = new ReGameStatus();
                     gameStatus.fillWithRawObj(obj.data);
                     Logger.debug("Filled with raw obj");
