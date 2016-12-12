@@ -18,8 +18,6 @@ namespace LandFightBotReborn.AI
         public delegate bool EndTurn();
         public delegate bool Attack(int assignedId,int x,int y);
         public delegate bool Move(int assignedId, int newX, int newY);
-
-
         protected Create create;
         protected EndTurn endTurn;
         protected Attack attack;
@@ -28,7 +26,6 @@ namespace LandFightBotReborn.AI
         protected Move move;
         protected int mapXColumn;
         protected int mapYRow;
-
         public AIBasic(GameStatus gameStatus, User user, Create create,EndTurn endTurn,Attack attack,Move move,int mapXColumn,int mapYRow)
         {
             this.gameStatus = gameStatus;

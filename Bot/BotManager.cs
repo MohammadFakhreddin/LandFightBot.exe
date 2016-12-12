@@ -139,10 +139,10 @@ namespace LandFightBotReborn.Bot
                     if (networkController != null && gameStatus.myTurn)
                     {
                         networkController.send(Constants.serverMessage.opCodes.MOVE_UNIT + Constants.serverMessage.opCodes.SEPERATOR +
-                                               (int)startPos.x + Constants.serverMessage.opCodes.SEPERATOR +
-                                               (int)startPos.y + Constants.serverMessage.opCodes.SEPERATOR +
-                                               (int)targetPos.x + Constants.serverMessage.opCodes.SEPERATOR +
-                                               (int)targetPos.y);
+                            (int)startPos.x + Constants.serverMessage.opCodes.SEPERATOR +
+                            (int)startPos.y + Constants.serverMessage.opCodes.SEPERATOR +
+                            (int)targetPos.x + Constants.serverMessage.opCodes.SEPERATOR +
+                            (int)targetPos.y);
                         return true;
                     }
                 }
@@ -201,14 +201,6 @@ namespace LandFightBotReborn.Bot
                     positionChanged = true;
                     gameMapPosition.x = numberOfMapXColumn - 2;
                 }
-//            if (positionChanged)
-//            {
-//                float startX = getAlyStartX();
-//                if (!unit.getIsAly())
-//                {
-//                    startX = getEnemyStartX();
-//                }
-//            }
             }
             int x;
             if (!checkUnitTail(unit, unit.getFeatures().width, gameMapPosition, gameStatus.myTurn, out x))
@@ -904,19 +896,19 @@ namespace LandFightBotReborn.Bot
             UnitController controller = new UnitController(this, newUnitFeatures, gameMapPosition, isAly, level,
                 assignedId);
             gameStatus.unitMap[(int) gameMapPosition.x][(int) gameMapPosition.y] = controller;
-            //checkForAddOrRemoveAbility((int)gameMapPosition.x, (int)gameMapPosition.y, true);
-            //if (features.width > 1) {
-            //    gameStatus.unitMap[x][(int)gameMapPosition.y] = controller;
-            //    if (!isAly)
-            //    {
-            //        checkForAddOrRemoveAbility((int)gameMapPosition.x + 1, (int)gameMapPosition.y, true);
-            //    }
-            //    else
-            //    {
-            //        checkForAddOrRemoveAbility((int)gameMapPosition.x - 1, (int)gameMapPosition.y, true);
-            //    }
-            //}
-            checkLocForAddOrRemoveAbil(controller, true);
+                //checkForAddOrRemoveAbility((int)gameMapPosition.x, (int)gameMapPosition.y, true);
+                //if (features.width > 1) {
+                //    gameStatus.unitMap[x][(int)gameMapPosition.y] = controller;
+                //    if (!isAly)
+                //    {
+                //        checkForAddOrRemoveAbility((int)gameMapPosition.x + 1, (int)gameMapPosition.y, true);
+                //    }
+                //    else
+                //    {
+                //        checkForAddOrRemoveAbility((int)gameMapPosition.x - 1, (int)gameMapPosition.y, true);
+                //    }
+                //}
+                checkLocForAddOrRemoveAbil(controller, true);
             float powerRegen = newUnitFeatures.powerRegen;
             if (gameStatus.myTurn)
             {

@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 
 namespace LandFightBotReborn.AI
-{
+{   
     public class AI1:AIBasic
     {
         int state;
@@ -31,7 +31,7 @@ namespace LandFightBotReborn.AI
         String gamePlay = "";
         int numberOfTurnPlayed = 0;
         public AI1(GameStatus gameStatus , User user , Create create, EndTurn endTurn, Attack attack, Move move, int mapXColumn, int mapYRow)
-            :base(gameStatus,user , create,endTurn,attack,move,mapXColumn,mapYRow)
+        :base(gameStatus,user , create,endTurn,attack,move,mapXColumn,mapYRow)
         {
             initializeCards();
         }
@@ -92,7 +92,7 @@ namespace LandFightBotReborn.AI
             int energiousFound = 0;
             for (int i = 0; i < mapYRow; i++)
                 for (int j = 0; j < gameStatus.alyLandEndX-1; j++)
-                    if (gameStatus.unitMap[j][i] != null &&
+                    if (gameStatus.unitMap[j][i] != null && 
                         gameStatus.unitMap[j][i].getFeatures().id == Constants.unitIds.ENERGIOUS)
                         energiousFound++;
             if (energiousFound < maxEnergiousNum) nextStateIsAllowed = false;
@@ -169,14 +169,14 @@ namespace LandFightBotReborn.AI
                     if (isEmpty == true) {
                         int rand = random(mapYRow);
                         Logger.info("attacking to empty place from :" + (firstAttackor.x) + (firstAttackor.y) + " to " + gameStatus.enemyLandStartX + 1 + rand);
-                        notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(),
+                        notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(), 
                             gameStatus.enemyLandStartX + 1  , rand);
                     } else if(enemyHiddenPlace != null && enemyHiddenPlace.Count != 0)
                     {
                         if (enemyHiddenPlace != null && enemyHiddenPlace.Count!= 0)
                         {
                             Logger.info("attacking to enemy hidden place");
-                            notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(),
+                            notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(), 
                                 (int) enemyHiddenPlace[0].x,(int) enemyHiddenPlace[0].y);
                         }
                     } else
@@ -184,19 +184,12 @@ namespace LandFightBotReborn.AI
                         Logger.info("attacking to random place");
                         int rand = random(mapXColumn - (gameStatus.enemyLandStartX));
                         notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(),
-                            rand, random(mapYRow) );
+                                rand, random(mapYRow) );
                     }
                     break;
             }
             if (notEnoughPower) endTurn();
         }
-
-
-
-
-
-
-
 
         public override void onCreate(int assignedId, int x, int y)
         {

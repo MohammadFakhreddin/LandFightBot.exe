@@ -165,6 +165,7 @@ namespace LandFightBotReborn.DB
             this.sqlManager = sqlManager;
             this.ruleManager = ruleManager;
             createTable();
+            selectAll();
         }
 
         public void createTable()
