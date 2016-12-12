@@ -14,7 +14,7 @@ namespace LandFightBotReborn.AI
     public class AI1:AIBasic
     {
         public AI1(GameStatus gameStatus, Create create, EndTurn endTurn, Attack attack, Move move, int mapXColumn, int mapYRow)
-        :base(gameStatus,create,endTurn,attack,move,mapXColumn,mapYRow)
+        :base(gameStatus,create,endTurn,attack,move,mapXColumn,mapYRow)//You have the refrence to the varaiables
         {
 
         }
@@ -26,7 +26,7 @@ namespace LandFightBotReborn.AI
 
         public override void onEndTurn(bool myTurn)
         {
-        
+
         }
 
         public override void onCreate(int assignedId, int x, int y)
