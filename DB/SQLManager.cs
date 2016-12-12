@@ -16,9 +16,9 @@ namespace LandFightBotReborn.DB
 
         //private string DB_LOCATION;
 
-        private IDbConnection mConnection = null;
-        private IDbCommand mCommand = null;
-        private IDataReader mReader = null;
+        private SQLiteConnection mConnection = null;
+        private SQLiteCommand mCommand = null;
+        private SQLiteDataReader mReader = null;
         private string mSQLString;
 
         //Initilizaing database
@@ -30,7 +30,7 @@ namespace LandFightBotReborn.DB
         private void onCreate()
         {
             string DBLocation = "";
-            DBLocation += ".."+Path.DirectorySeparatorChar.ToString()+".."+Path.DirectorySeparatorChar.ToString()
+            DBLocation += ".." + Path.DirectorySeparatorChar.ToString() + ".." +Path.DirectorySeparatorChar.ToString()//+".."+Path.DirectorySeparatorChar.ToString()
                           + "Database" + Path.DirectorySeparatorChar.ToString();
             DBLocation += DB_NAME + ".db";
             Logger.info("Starting database at location " + DBLocation);
@@ -41,7 +41,8 @@ namespace LandFightBotReborn.DB
             }
             mConnection = new SQLiteConnection(("URI=file:" + DBLocation));
             Logger.info("Creating sqllite connection successful");
-            mCommand = mConnection.CreateCommand();
+            mCommand = new SQLiteCommand(mConnection);
+            mConnection.Open();
         }
 
         /// <summary>
@@ -49,18 +50,25 @@ namespace LandFightBotReborn.DB
         /// </summary>
         public void execute(string commandText)
         {
+            if (mReader != null && !mReader.IsClosed) mReader.Close();
+            if (mCommand != null) mCommand.Dispose();
+            if (mConnection != null && mConnection.State != ConnectionState.Closed) mConnection.Close();
             mConnection.Open();
+            mCommand = new SQLiteCommand(mConnection);
             mCommand.CommandText = commandText;
             mCommand.ExecuteNonQuery();
-            mConnection.Close();
         }
 
-        public IDataReader executeReader(string commandText)
+        public SQLiteDataReader executeReader(string commandText)
         {
+            if (mReader != null && !mReader.IsClosed) mReader.Close();
+            if (mCommand != null) mCommand.Dispose();
+            if (mConnection != null && mConnection.State != ConnectionState.Closed) mConnection.Close();
             mConnection.Open();
+            mCommand = new SQLiteCommand(mConnection);
             mCommand.CommandText = commandText;
             mReader = mCommand.ExecuteReader();
-            mConnection.Close();
+            //mConnection.Close();
             return mReader;
         }
 

@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Data.SQLite;
 using System.IO;
 using LandFightBotReborn.Bot.DataType;
+using LandFightBotReborn.Utils;
 
 namespace LandFightBotReborn.DB
 {
@@ -216,12 +217,14 @@ namespace LandFightBotReborn.DB
             {
                 ruleManager.selectAll();
                 string query = "SELECT * FROM " + UNIT_TABLE_NAME + "";
-                IDataReader mReader = sqlManager.executeReader(query);
+                SQLiteDataReader mReader = sqlManager.executeReader(query);
                 List<UnitFeatures> unitList = new List<UnitFeatures>();
+                int Counter = 0;
                 if (mReader.Read())
                 {
                     do
                     {
+                        Counter++;
                         int id = mReader.GetInt32(0);
                         string name = mReader.GetString(1);
                         int powerSpawn = mReader.GetInt32(2);
@@ -235,8 +238,8 @@ namespace LandFightBotReborn.DB
                         int health = mReader.GetInt32(10);
                         bool isArmored = mReader.GetBoolean(11);
                         bool isGrounded = mReader.GetBoolean(12);
-                        int width = mReader.GetInt32(15);
-                        int height = mReader.GetInt32(16);
+                        int width = (int) mReader.GetFloat(15);
+                        int height = (int) mReader.GetFloat(16);
                         int vision = mReader.GetInt32(17);
                         int requiredLevel = mReader.GetInt32(18);
                         int coinCost = mReader.GetInt32(19);
@@ -258,7 +261,7 @@ namespace LandFightBotReborn.DB
                         List<UpgradeRule> upgradeRule = ruleManager.selectUnitUpgradeRule(id);
                         unit.rules = upgradeRule;
                         unitList.Add(unit);
-                    } while (mReader.NextResult());
+                    } while (mReader.Read());
                 }
                 allUnitFeatuers = unitList;
             }

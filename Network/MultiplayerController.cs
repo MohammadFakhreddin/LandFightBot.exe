@@ -164,7 +164,7 @@ namespace LandFightBotReborn.Network
                 time = int.Parse(obj.GetField("time").ToString());
                 firstTurnIsMine = bool.Parse(obj.GetField("isFirst").ToString());
                 unitList = new List<UnitState>();
-                Logger.debug("Re game status before units");
+                //Logger.debug("Re game status before units");
                 JSONObject rawUnits = obj.GetField("unitList");
                 for (int i = 0; i < rawUnits.Count; i++)
                 {
@@ -172,7 +172,7 @@ namespace LandFightBotReborn.Network
                     newUnit.fillWithRawObj(rawUnits[i]);
                     unitList.Add(newUnit);
                 }
-                Logger.debug("Re game status parse complete");
+                //ogger.debug("Re game status parse complete");
             }
 
             public void fillWithRawObj(JsonData syncInfo)
@@ -187,7 +187,7 @@ namespace LandFightBotReborn.Network
                 time = int.Parse(syncInfo["time"].ToString());
                 firstTurnIsMine = bool.Parse(syncInfo["isFirst"].ToString());
                 unitList = new List<UnitState>();
-                Logger.debug("Re game status before units");
+                //Logger.debug("Re game status before units");
                 JsonData rawUnits = syncInfo["unitList"];
                 for (int i = 0; i < rawUnits.Count; i++)
                 {
@@ -195,7 +195,7 @@ namespace LandFightBotReborn.Network
                     newUnit.fillWithRawObj(rawUnits[i]);
                     unitList.Add(newUnit);
                 }
-                Logger.debug("Re game status parse complete");
+                //Logger.debug("Re game status parse complete");
             }
         }
         /// <summary>
@@ -240,9 +240,9 @@ namespace LandFightBotReborn.Network
 
             private void onServerOrder(SocketIOEvent obj)
             {
-                Logger.debug("On server order method");
+                //Logger.debug("On server order method");
                 string message = obj.data.GetField("message").ToString().Replace("\"", string.Empty);
-                Logger.debug("Recieved new order:" + message);
+                //Logger.debug("Recieved new order:" + message);
                 parent.lastDataTime = 0;
                 onRcCallBack(message);
             }
@@ -284,7 +284,7 @@ namespace LandFightBotReborn.Network
                         Logger.debug("Rconnect data is outdated");
                         return;
                     }
-                    Logger.debug("Recieved game status:" + obj.data.ToString());
+                    //Logger.debug("Recieved game status:" + obj.data.ToString());
                     ReGameStatus gameStatus = new ReGameStatus();
                     gameStatus.fillWithRawObj(obj.data);
                     Logger.debug("Filled with raw obj");
@@ -489,10 +489,10 @@ namespace LandFightBotReborn.Network
             OnDisconnect temp = onDCCallBack;
             onDCCallBack = null;
             io.On(Constants.serverMessage.events.ACCEPT_RECIEVED, (SocketIOEvent obj) =>
-            {
-                onDCCallBack = temp;
-                reqSuc = true;
-            }
+                {
+                    onDCCallBack = temp;
+                    reqSuc = true;
+                }
             );
             while (!reqSuc)
             {
@@ -523,29 +523,29 @@ namespace LandFightBotReborn.Network
             while (!io.IsConnected)
             {
                 io.On(Constants.serverMessage.events.CONNECT, (SocketIOEvent obj) =>
-                {
-                }
+                    {
+                    }
                 );
                 io.On(Constants.serverMessage.events.DISCONNECT, onDisconnect);
                 Thread.Sleep(100);
             }
             eventHandler.initializeForFirstTime(this, io, onRcCallBack, onDCCallBack, onGameIsReady,
-                    onGameFinished, onEnemyDCAccepted, onReconnectComplete, onReconnectFailed);
+                onGameFinished, onEnemyDCAccepted, onReconnectComplete, onReconnectFailed);
             bool ruleIsReady = false;
             io.On(Constants.serverMessage.events.GAME_RULE_READY, (obj) =>
-            {
-                ruleIsReady = true;
-                GameInfo info = new GameInfo();
-                string gameToken = player.user.getGameToken();
-                string userToken = player.user.getUserToken();
-                string enemyToken = player.user.getOpponentToken();
-                string enemyName = player.user.getEnemyName();
-                info.fillWithCommonData(obj, userToken, gameToken, enemyToken, enemyName);
-                onRuleReady(info);
-                player.user.setGameMode(Constants.gameMode.MULTI_PLAYER, info);
-                Thread t = new Thread(new ThreadStart(retryConnection));
-                t.Start();
-            }
+                {
+                    ruleIsReady = true;
+                    GameInfo info = new GameInfo();
+                    string gameToken = player.user.getGameToken();
+                    string userToken = player.user.getUserToken();
+                    string enemyToken = player.user.getOpponentToken();
+                    string enemyName = player.user.getEnemyName();
+                    info.fillWithCommonData(obj, userToken, gameToken, enemyToken, enemyName);
+                    onRuleReady(info);
+                    player.user.setGameMode(Constants.gameMode.MULTI_PLAYER, info);
+                    Thread t = new Thread(new ThreadStart(retryConnection));
+                    t.Start();
+                }
             );
             while (!ruleIsReady)
             {
@@ -579,12 +579,12 @@ namespace LandFightBotReborn.Network
         {
             bool responceRecieved = false;
             io.On(Constants.serverMessage.events.ENEMY_DC_ACCEPTED, (obj) =>
-            {
-                responceRecieved = true;
-                Bounty bounty = new Bounty();
-                bounty.fillWithRawData(obj.data);
-                onEnemyDcAccepted(bounty);
-            }
+                {
+                    responceRecieved = true;
+                    Bounty bounty = new Bounty();
+                    bounty.fillWithRawData(obj.data);
+                    onEnemyDcAccepted(bounty);
+                }
             );
             Thread.Sleep(2000);
             if (responceRecieved == false)
@@ -622,9 +622,9 @@ namespace LandFightBotReborn.Network
             {
                 Console.WriteLine("Attempting to reset connection");
                 io.On(Constants.serverMessage.events.CONNECT, (obj) =>
-                {
-                    Console.WriteLine("reconnectng complete");
-                }
+                    {
+                        Console.WriteLine("reconnectng complete");
+                    }
                 );
                 io.On(Constants.serverMessage.events.DISCONNECT, onDisconnect);
                 Thread.Sleep(1000);
@@ -644,9 +644,9 @@ namespace LandFightBotReborn.Network
                 reconnectMode = true;
                 bool requestArrived = false;
                 io.On(Constants.serverMessage.events.RECONNECT_REQ_ARRIVE, (obj) =>
-                {
-                    requestArrived = true;
-                }
+                    {
+                        requestArrived = true;
+                    }
                 );
                 while (!requestArrived)
                 {
@@ -663,12 +663,12 @@ namespace LandFightBotReborn.Network
             {
                 io.Emit(Constants.serverMessage.events.CANCEL_FIND_GAME);
                 io.On(Constants.serverMessage.events.CANCEL_FIND_GAME_ACCEPTED, (obj) =>
-                {
-                    if (onCancelAccepted != null)
                     {
-                        onCancelAccepted();
+                        if (onCancelAccepted != null)
+                        {
+                            onCancelAccepted();
+                        }
                     }
-                }
                 );
             }
             else
