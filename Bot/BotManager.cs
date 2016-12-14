@@ -19,7 +19,7 @@ namespace LandFightBotReborn.Bot
         private int numberOfMapYRow = 6;
         private int maxPower = 3000; //It must be same with server do not change this;
         private int basePowerRegen;
-        private int initialPower; 
+        private int initialPower;
         private int deadLanBonusPower;
         private int turnTime;
         private int maxTurn;
@@ -30,7 +30,7 @@ namespace LandFightBotReborn.Bot
         private string enemyName;
         private Queue<String> recievedMessages;
         private int bonusTime = 0;
-        
+
         /// <summary>
         /// Dirty code for finding attacker
         /// </summary>
@@ -84,7 +84,7 @@ namespace LandFightBotReborn.Bot
                 if (targetUnit.getAvailableShots() > 0)
                 {
                     if ((targetUnit.getFeatures().id == Constants.unitIds.ZIRAKI &&
-                        targetUnit.getGameMapPosition().y == targetPos.y) ||
+                         targetUnit.getGameMapPosition().y == targetPos.y) ||
                         (targetUnit.getFeatures().id != Constants.unitIds.ZIRAKI))
                     {
                         //if (gameMode != Strings.gameMode.MULTI_PLAYER)
@@ -94,9 +94,9 @@ namespace LandFightBotReborn.Bot
                         //if (gameMode == Strings.gameMode.MULTI_PLAYER)
                         //{
                         string message = Constants.serverMessage.opCodes.ATTACK_UNIT + Constants.serverMessage.opCodes.SEPERATOR +
-                        targetUnit.getGameMapPosition().x + Constants.serverMessage.opCodes.SEPERATOR +
-                        targetUnit.getGameMapPosition().y + Constants.serverMessage.opCodes.SEPERATOR +
-                        (int)targetPos.x + Constants.serverMessage.opCodes.SEPERATOR + (int)targetPos.y;
+                                         targetUnit.getGameMapPosition().x + Constants.serverMessage.opCodes.SEPERATOR +
+                                         targetUnit.getGameMapPosition().y + Constants.serverMessage.opCodes.SEPERATOR +
+                                         (int)targetPos.x + Constants.serverMessage.opCodes.SEPERATOR + (int)targetPos.y;
                         networkController.send(message);
                         //    attack(selectedAlyUnit, gameMapPosition, null);
                         //}
@@ -185,40 +185,32 @@ namespace LandFightBotReborn.Bot
             return false;
         }
 
-    private bool checkMoveIsPossible(UnitController unit, Vector2 gameMapPosition)
-    {
-        UnitFeatures features = unit.getFeatures();
-        if (unit.getFeatures().width > 1)
+        private bool checkMoveIsPossible(UnitController unit, Vector2 gameMapPosition)
         {
-            bool positionChanged = false;
-            if (gameMapPosition.x == 0)
+            UnitFeatures features = unit.getFeatures();
+            if (unit.getFeatures().width > 1)
             {
-                positionChanged = true;
-                gameMapPosition.x = 1;
+                bool positionChanged = false;
+                if (gameMapPosition.x == 0)
+                {
+                    positionChanged = true;
+                    gameMapPosition.x = 1;
+                }
+                else if (gameMapPosition.x == numberOfMapXColumn - 1)
+                {
+                    positionChanged = true;
+                    gameMapPosition.x = numberOfMapXColumn - 2;
+                }
             }
-            else if (gameMapPosition.x == numberOfMapXColumn - 1)
+            int x;
+            if (!checkUnitTail(unit, unit.getFeatures().width, gameMapPosition, gameStatus.myTurn, out x))
             {
-                positionChanged = true;
-                gameMapPosition.x = numberOfMapXColumn - 2;
+                return false;
             }
-//            if (positionChanged)
-//            {
-//                float startX = getAlyStartX();
-//                if (!unit.getIsAly())
-//                {
-//                    startX = getEnemyStartX();
-//                }
-//            }
+            return true;
         }
-        int x;
-        if (!checkUnitTail(unit, unit.getFeatures().width, gameMapPosition, gameStatus.myTurn, out x))
-        {
-            return false;
-        }
-        return true;
-    }
 
-    public BotManager(int AINumber,int gameMode, User user)
+        public BotManager(int AINumber,int gameMode, User user)
         {
             this.user = user;
             initializeAI(AINumber);
@@ -487,7 +479,7 @@ namespace LandFightBotReborn.Bot
 
         public void initializeGame()
         {
-            
+
             gameStatus.gameStarted = false;
 
             gameStatus.unitMap = new UnitController[numberOfMapXColumn][];
@@ -1203,7 +1195,7 @@ namespace LandFightBotReborn.Bot
 //                    executeOnMainThread("execute");
 //                    Console.Log(Errors.MAP_SYNC_ISSUE);
 //                }
-                AI.onMove(movingUnit.getAssignedId(), x1, y1, x2, y2);   
+                AI.onMove(movingUnit.getAssignedId(), x1, y1, x2, y2);
             }
             else if (splited[0] == Constants.serverMessage.opCodes.ATTACK_UNIT)
             {

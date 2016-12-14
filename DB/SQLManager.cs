@@ -30,7 +30,7 @@ namespace LandFightBotReborn.DB
         private void onCreate()
         {
             string DBLocation = "";
-            DBLocation += ".." + Path.DirectorySeparatorChar.ToString() + ".." +Path.DirectorySeparatorChar.ToString()+".."+Path.DirectorySeparatorChar.ToString()
+            DBLocation += ".." + Path.DirectorySeparatorChar.ToString() + ".." +Path.DirectorySeparatorChar.ToString()//+".."+Path.DirectorySeparatorChar.ToString()
                           + "Database" + Path.DirectorySeparatorChar.ToString();
             DBLocation += DB_NAME + ".db";
             Logger.info("Starting database at location " + DBLocation);

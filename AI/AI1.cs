@@ -196,13 +196,6 @@ namespace LandFightBotReborn.AI
             if (notEnoughPower) endTurn();
         }
 
-
-
-
-
-
-
-
         public override void onCreate(int assignedId, int x, int y)
         {
             bool isMyTurn = (x < mapXColumn / 2);
@@ -217,7 +210,7 @@ namespace LandFightBotReborn.AI
 
         public override void onMove(int assignedId, int oldX, int oldY, int newX, int newY)
         {
-     
+
         }
 
         public override void onEndGame(MultiplayerController.Bounty bounty)
