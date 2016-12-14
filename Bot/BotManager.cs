@@ -1437,8 +1437,8 @@ namespace LandFightBotReborn.Bot
                         hittedUnits.Add(new HittedUnits(unitId, damage));
                     }
                 }
-                hitUnits(hittedUnits, new Vector2(x, y), lastAttacker);
                 AI.onAttack(lastAttacker.getAssignedId(), x, y, hittedUnits);
+                hitUnits(hittedUnits, new Vector2(x, y), lastAttacker);
             }
             else
             {
