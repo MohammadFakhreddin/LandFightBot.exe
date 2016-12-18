@@ -59,5 +59,10 @@ namespace LandFightBotReborn.Bot.DataType
         /// Right now turn number
         /// </summary>
         public int turn = 0;
+        public GameStatus()
+        {
+            enemyLandStartX = 6;
+            alyLandEndX = 6;
+        }
     }
 }

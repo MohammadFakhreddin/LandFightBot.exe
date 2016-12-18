@@ -20,7 +20,7 @@ namespace LandFightBotReborn
             sqlManager = new SQLManager();
             upgradeRule = new UpgradeRuleManager(sqlManager);
             unitManager = new UnitManager(sqlManager,upgradeRule);
-            botManager = new BotManager(1,Constants.gameMode.MULTI_PLAYER,"glad","1234");//TODO We must define player cards
+            botManager = new BotManager(2,Constants.gameMode.MULTI_PLAYER, /*"sosan"*/"glad", "1234");//TODO We must define player cards
         }
 
         static void Main(string[] args)

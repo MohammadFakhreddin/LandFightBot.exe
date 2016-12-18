@@ -56,6 +56,9 @@ namespace LandFightBotReborn.Bot
                 case 1:
                     AI = new AI1(gameStatus , user, create, endTurn, attack, move, numberOfMapXColumn, numberOfMapYRow);
                     break;
+                case 2:
+                    AI = new AI2(gameStatus, user, create, endTurn, attack, move, numberOfMapXColumn, numberOfMapYRow);
+                    break;
             }
         }
 
@@ -1239,7 +1242,7 @@ namespace LandFightBotReborn.Bot
             }
             else if (splited[0] == Constants.serverMessage.opCodes.CREATE_UNIT)
             {
-                Logger.info("create unit");
+                Logger.info("create unit---------------------------");
                 int unitId = int.Parse(splited[1]);
                 x1 = int.Parse(splited[2]);
                 y1 = int.Parse(splited[3]);
@@ -1256,6 +1259,7 @@ namespace LandFightBotReborn.Bot
                     isAly = true;
                 }
                 createNewUnit(user.getAvailableFeatures(unitId), mapPos, isAly, level, assignedId);
+                Logger.info("create unit2---------------------------");
                 AI.onCreate(assignedId, x1, y1);
             }
             //else if (splited[0] == Constants.serverMessage.opCodes.CLIENT_READY)
@@ -1738,7 +1742,6 @@ namespace LandFightBotReborn.Bot
         {
             if (enemyLandStartX != gameStatus.enemyLandStartX)
             {
-                Logger.debug("THis is shitt:  " + enemyLandStartX.ToString());
                 for (int i = (numberOfMapXColumn / 2); i <= enemyLandStartX; i++)
                 {
                     for (int j = 0; j < numberOfMapYRow; j++)

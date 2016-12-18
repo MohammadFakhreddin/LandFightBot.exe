@@ -49,7 +49,6 @@ namespace LandFightBotReborn.AI
             Logger.info("------------------------> onEndTurn " + myTurn);
             if (myTurn)
             {
-                Console.WriteLine("-------------------------------------------------------------------------");
                 Logger.info("endTurnCalled");
                 numberOfTurnPlayed++;
                 String currentMap = "\n";
@@ -72,8 +71,6 @@ namespace LandFightBotReborn.AI
                 notEnoughPower = false;
                 state = checkYourState();
                 doThis(state);
-                //endTurn();
-                Console.WriteLine("-------------------------------------------------------------------------");
             }
 
         }

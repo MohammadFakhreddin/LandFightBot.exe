@@ -92,6 +92,7 @@ namespace LandFightBotReborn
         public static string GAME_NAME = "landFight";
         //public static string GAME_URL = "http://landfight.ddns.net/";
         public static string GAME_URL = "http://192.99.103.114/";
+        //public static string GAME_URL = "http://localhost/";
         //public static string GAME_URL = "http://192.168.137.1/";
         //public static string GAME_URL = "http://192.168.1.6/";
         public static class HEADERS
@@ -148,6 +149,8 @@ namespace LandFightBotReborn
         }
 
         public static string SOCKET_URL = "ws://192.99.103.114:80/socket.io/?EIO=4&transport=websocket";
+        //public static string SOCKET_URL = "ws://localhost:80/socket.io/?EIO=4&transport=websocket";
+
         public static class SOCKET_FIELDS
         {
             public static string[] PARAMS = new string[]
