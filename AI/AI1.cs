@@ -160,28 +160,33 @@ namespace LandFightBotReborn.AI
                         {
                             isEmpty = false;
                             if (gameStatus.unitMap[gameStatus.enemyLandStartX + 1][i].getFeatures().id != Constants.unitIds.BIKHASIAT)
-                                shouldAttack.Add(new Vector2(i, gameStatus.enemyLandStartX + 1));
+                                shouldAttack.Add(new Vector2( gameStatus.enemyLandStartX + 1,i));
                         }
                     Vector2 firstAttackor = readyAttackorPlace[0];
                     if (isEmpty == true) {
                         int rand = random(mapYRow);
-                        Logger.info("attacking to empty place from :" + (firstAttackor.x) + (firstAttackor.y) + " to " + gameStatus.enemyLandStartX + 1 + rand);
-                        notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(), 
-                            gameStatus.enemyLandStartX + 1  , rand);
-                    } else if(enemyHiddenPlace != null && enemyHiddenPlace.Count != 0)
+                        Logger.info("attacking to empty place from :" + (firstAttackor.x) + (firstAttackor.y) + " to " + (gameStatus.enemyLandStartX + 1) + rand);
+                        notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(),
+                            gameStatus.enemyLandStartX + 1, rand);
+                    } else if (isEmpty ==false && shouldAttack.Count!= 0 ) {
+                        Logger.info("attacking to enemy on firstrow place from :" + (firstAttackor.x) + (firstAttackor.y) + " to " + (shouldAttack[0].x) + ((int)shouldAttack[0].y));
+                        notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(),
+                           (int) shouldAttack[0].x, (int)shouldAttack[0].y);
+                    } else if (enemyHiddenPlace != null && enemyHiddenPlace.Count != 0)
                     {
-                        if (enemyHiddenPlace != null && enemyHiddenPlace.Count!= 0)
+                        if (enemyHiddenPlace != null && enemyHiddenPlace.Count != 0)
                         {
                             Logger.info("attacking to enemy hidden place");
-                            notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(), 
-                                (int) enemyHiddenPlace[0].x,(int) enemyHiddenPlace[0].y);
+                            notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(),
+                                (int)enemyHiddenPlace[0].x, (int)enemyHiddenPlace[0].y);
                         }
                     } else
                     {
-                        Logger.info("attacking to random place");
-                        int rand = random(mapXColumn - (gameStatus.enemyLandStartX));
+                        int rand = random(mapXColumn - (gameStatus.enemyLandStartX + 1));
+                        int rand2 = random(mapYRow);
+                        Logger.info("attacking to random place from : " + (firstAttackor.x) + (firstAttackor.y) + " to " + (gameStatus.enemyLandStartX + 1 + rand) + rand2);
                         notEnoughPower = attack(gameStatus.unitMap[(int)(firstAttackor.x)][(int)(firstAttackor.y)].getAssignedId(),
-                                rand, random(mapYRow) );
+                               gameStatus.enemyLandStartX + 1 + rand, rand2);
                     }
                     break;
             }

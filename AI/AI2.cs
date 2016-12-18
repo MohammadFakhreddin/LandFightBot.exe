@@ -1,4 +1,4 @@
-﻿using LandFightBotReborn.Bot.DataType;
+using LandFightBotReborn.Bot.DataType;
 using LandFightBotReborn.DB;
 using LandFightBotReborn.Network;
 using LandFightBotReborn.Utils;
@@ -15,9 +15,9 @@ namespace LandFightBotReborn.AI
         private UnitFeatures bombieFeatures;
         private UnitFeatures maliousFeatures;
         private UnitFeatures enerjiousFeatures;
-        private Dictionary<int,int> enemyCategoryCount;
+        private Dictionary<int, int> enemyCategoryCount;
         private Dictionary<int, List<UnitController>> myUnits;
-        private Dictionary<int,UnitController> enemyKnownUnits;
+        private Dictionary<int, UnitController> enemyKnownUnits;
         private const int DECK_SIZE = 4;
         private const int enerjousMax = 5;
         private const int maliosMax = 2;
@@ -126,7 +126,7 @@ namespace LandFightBotReborn.AI
                                     }
                                 }
                             }
-                            catch(Exception e)
+                            catch (Exception e)
                             {
                                 return;
                             }
@@ -135,7 +135,8 @@ namespace LandFightBotReborn.AI
                             {
                                 attacker = myUnits[Constants.unitIds.BOMBI][0];
                                 myUnits[Constants.unitIds.BOMBI].RemoveAt(0);
-                            }else if(attacker==null && myUnits[Constants.unitIds.BLUE].Count > 0)
+                            }
+                            else if (attacker == null && myUnits[Constants.unitIds.BLUE].Count > 0)
                             {
                                 attacker = myUnits[Constants.unitIds.BLUE][0];
                             }
@@ -157,7 +158,7 @@ namespace LandFightBotReborn.AI
                             }
                             changed = true;
                         }
-                        if (changed && gameStatus.myPower>300)
+                        if (changed && gameStatus.myPower > 300)
                         {
                             Thread.Sleep(1000);
                         }
@@ -197,7 +198,8 @@ namespace LandFightBotReborn.AI
                     enemyKnownUnits.Add(createdUnit.getAssignedId(), createdUnit);
                     Logger.debug("New enemy detected");
                 }
-            }else
+            }
+            else
             {
                 if (myUnits.ContainsKey(createdUnit.getFeatures().id))
                 {
@@ -228,7 +230,8 @@ namespace LandFightBotReborn.AI
             }
             if (attacker.getIsAly())
             {
-                for (int i = 0; i < hittedUnits.Count; i++){
+                for (int i = 0; i < hittedUnits.Count; i++)
+                {
                     UnitController unit = findWithAssignedId(hittedUnits[i].assignedId);
                     if (unit != null)
                     {
@@ -252,13 +255,14 @@ namespace LandFightBotReborn.AI
                         //throw new System.NullReferenceException("unit not found");
                     }
                 }
-            }else
+            }
+            else
             {
                 enemyKnownUnits.Add(attacker.getAssignedId(), attacker);
                 for (int i = 0; i < hittedUnits.Count; i++)
                 {
                     UnitController unit = findWithAssignedId(hittedUnits[i].assignedId);
-                    if(unit == null)
+                    if (unit == null)
                     {
                         //throw new System.NullReferenceException("unit not found");
                     }
