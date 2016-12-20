@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17dfa2ac-af07-4950-97ca-70db9606a126" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/landfightbot.sln" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/bin/Debug/LandFightBotReborn.exe.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/bin/Debug/LandFightBotReborn.vshost.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/bin/Debug/LandFightBotReborn.vshost.exe.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/bin/Debug/LandFightBotReborn.vshost.exe.manifest" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/Database/landfight.db" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/Database/landfight.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/.gitignore" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/AI/AI1.cs" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/AI/AI1.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/AI/AIBasic.cs" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/AI/AIBasic.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/App.config" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/App.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/Bot/BotManager.cs" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/Bot/BotManager.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/DB/SQLManager.cs" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/DB/SQLManager.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/DB/UnitManager.cs" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/DB/UnitManager.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/LandFightBotReborn.csproj" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/LandFightBotReborn.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../LandFightBotReborn/packages.config" afterPath="$PROJECT_DIR$/../../LandFightBotReborn/packages.config" />
+    </list>
+    <ignored path="LandFightBotReborn.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="LandFightBotReborn" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Constants.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Constants.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6615">
+              <caret line="315" column="31" selection-start-line="315" selection-start-column="31" selection-end-line="315" selection-end-column="31" />
+              <folding>
+                <marker date="1480522022737" expanded="true" signature="6:115" ph="..." />
+                <marker date="1480522022737" expanded="true" signature="145:14666" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="174:14664" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="272:3509" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="754:3499" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="1090:1216" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="1339:1665" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="1730:2054" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="2122:2444" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="2522:3076" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="3094:3485" ph="/* public static bool limitedAbilsContains(int unitId) ... */" />
+                <marker date="1480522022737" expanded="true" signature="3710:3833" ph="/* public static string GAME_URL = &quot;http://192.168.137.1/&quot;; ... */" />
+                <marker date="1480522022737" expanded="true" signature="3869:4060" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="4167:4706" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="4190:4332" ph="/* TODO We need device id to login ... */" />
+                <marker date="1480522022737" expanded="true" signature="4373:4696" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="4804:5295" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="4876:4934" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="4976:5285" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="5342:5785" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="5569:5775" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="5933:6072" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="6013:6061" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="6113:6928" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="6343:6597" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="6643:6918" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="6969:9167" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="7296:7549" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="7599:7856" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="7898:8100" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="8141:9157" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="8372:9143" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="9204:9679" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="9716:9994" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="10036:14658" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="10086:11719" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="10824:10969" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="11732:11902" ph="/* Start game is in handsahke mode server says i'm ready then client says that and after these two things ... */" />
+                <marker date="1480522022737" expanded="true" signature="11941:14648" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="12380:12476" ph="{...}" />
+                <marker date="1480522022737" expanded="true" signature="13383:13612" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1480520288814" expanded="true" signature="6:174" ph="..." />
+                <marker date="1480520288814" expanded="true" signature="204:860" ph="{...}" />
+                <marker date="1480520288814" expanded="true" signature="231:858" ph="{...}" />
+                <marker date="1480520288814" expanded="true" signature="448:764" ph="{...}" />
+                <marker date="1480520288814" expanded="true" signature="805:852" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="packages.config" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/packages.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.config" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/App.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vector4.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Utils/Vector4.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding>
+                <marker date="1480504496585" expanded="true" signature="6:115" ph="..." />
+                <marker date="1480504496585" expanded="true" signature="151:461" ph="{...}" />
+                <marker date="1480504496585" expanded="true" signature="178:459" ph="{...}" />
+                <marker date="1480504496585" expanded="true" signature="337:453" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/DB/SQLManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1481580597417" expanded="true" signature="6:133" ph="..." />
+                <marker date="1481580597417" expanded="true" signature="173:229" ph="/// By M.Fakhreddin ... " />
+                <marker date="1481580597417" expanded="true" signature="257:3159" ph="{...}" />
+                <marker date="1481580597417" expanded="true" signature="600:644" ph="{...}" />
+                <marker date="1481580597417" expanded="true" signature="677:1514" ph="{...}" />
+                <marker date="1481580597417" expanded="true" signature="1524:1604" ph="/// It executes the orders directly ... " />
+                <marker date="1481580597417" expanded="true" signature="1652:2077" ph="{...}" />
+                <marker date="1481580597417" expanded="true" signature="2144:2640" ph="{...}" />
+                <marker date="1481580597417" expanded="true" signature="2650:2729" ph="/// Clean up everything for SQLite ... " />
+                <marker date="1481580597417" expanded="true" signature="2764:3153" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/DB/UnitManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+              <folding>
+                <marker date="1481580578367" expanded="true" signature="6:266" ph="..." />
+                <marker date="1481580578367" expanded="true" signature="299:13018" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="306:497" ph="/// By M.Hooshdar M.Fakhreddin ... " />
+                <marker date="1481580578367" expanded="true" signature="527:4313" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="2114:3253" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="3308:3549" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="3586:4307" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="4318:4385" ph="/// By M.Hooshdar M.Fakhreddin ... " />
+                <marker date="1481580578367" expanded="true" signature="4414:13015" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="6671:6827" ph="/* private const string UNIT_NUMBER_OF_STATE_IMAGES = &quot;numberOfStateImages&quot;; ... */" />
+                <marker date="1481580578367" expanded="true" signature="7056:7214" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="7249:9480" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="9236:9397" ph="/* SEPARATOR + ... */" />
+                <marker date="1481580578367" expanded="true" signature="9530:9742" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="9775:12897" ph="{...}" />
+                <marker date="1481580578367" expanded="true" signature="12961:13008" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/User.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+              <folding>
+                <marker date="1480498420328" expanded="true" signature="6:125" ph="..." />
+                <marker date="1480498420328" expanded="true" signature="6:157" ph="..." />
+                <marker date="1480498420328" expanded="true" signature="200:7597" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="224:7595" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="340:1601" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="1011:1212" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="1316:1591" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="1631:2336" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="1792:2096" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="2158:2280" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="2310:2326" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="2345:2470" ph="/// It indicates user current card if one card is not in list it is not included ... " />
+                <marker date="1480498420328" expanded="true" signature="2666:2789" ph="/// For retriving game after dc we must fill this part it also have game rules ... " />
+                <marker date="1480498420328" expanded="true" signature="2937:3109" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="3149:3201" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="3263:3511" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="3563:3627" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="3674:3732" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="3816:3904" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="3942:4100" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="4138:4296" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="4334:4498" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="4540:4700" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="4734:4783" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="4844:4889" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="4899:5145" ph="/// When player reconnects ... " />
+                <marker date="1480498420328" expanded="true" signature="5234:5366" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="5419:5918" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="6057:6378" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="6057:7595" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="6424:6642" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="6652:6737" ph="/// It updates features from playerCards ... " />
+                <marker date="1480498420328" expanded="true" signature="6781:7417" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="7454:7503" ph="{...}" />
+                <marker date="1480498420328" expanded="true" signature="7540:7589" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/UnitController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <folding>
+                <marker date="1480515448991" expanded="true" signature="6:108" ph="..." />
+                <marker date="1480515448991" expanded="true" signature="151:10558" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="185:10556" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="701:1433" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="1470:1737" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="1775:2116" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="2167:2520" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="2559:4097" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="4107:4426" ph="///   It is called when current unit is hitted ... " />
+                <marker date="1480515448991" expanded="true" signature="4493:5153" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="4907:5048" ph="/* commander id = 7! ... */" />
+                <marker date="1480515448991" expanded="true" signature="5199:5375" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="5424:5513" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="5424:5925" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="5447:5500" ph="/* if (!abilityGain.Contains(ability)) ... */" />
+                <marker date="1480515448991" expanded="true" signature="5973:6476" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="6525:6902" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="6777:6892" ph="/* if (abilityGain.Contains(ability)) ... */" />
+                <marker date="1480515448991" expanded="true" signature="6954:7240" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="7250:7382" ph="///   It gives yu the shots which are avaible each turn ... " />
+                <marker date="1480515448991" expanded="true" signature="7421:7496" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="7506:7584" ph="///   It must be called each turn ... " />
+                <marker date="1480515448991" expanded="true" signature="7617:7666" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="7785:7922" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="7950:8114" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="8150:8201" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="8252:8314" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="8359:8415" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="8458:8507" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="8566:8651" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="8698:8756" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="8788:8834" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="8913:9956" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="9854:9956" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="10008:10194" ph="{...}" />
+                <marker date="1480515448991" expanded="true" signature="10266:10550" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vector2.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Utils/Vector2.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1480504076884" expanded="true" signature="6:115" ph="..." />
+                <marker date="1480504076884" expanded="true" signature="151:358" ph="{...}" />
+                <marker date="1480504076884" expanded="true" signature="178:356" ph="{...}" />
+                <marker date="1480504076884" expanded="true" signature="282:350" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../LandFightBotReborn" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameElements.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameStatus.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/Ability.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/UnitController.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Program.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/LandFightBotReborn.csproj" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Constants.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Network/HttpManager.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/User.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/AI/AI1.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/AI/AIBasic.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Bot/BotManager.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/DB/UnitManager.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/DB/UpgradeRuleManager.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/Network/MultiplayerController.cs" />
+        <option value="$PROJECT_DIR$/../../LandFightBotReborn/DB/SQLManager.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-772" />
+    <option name="y" value="711" />
+    <option name="width" value="1840" />
+    <option name="height" value="1092" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (with missing packages)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (with missing packages)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DB" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (with missing packages)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bot" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (with missing packages)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bot" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataType" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LandFightBotReborn (with missing packages)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AI" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../packages/SocketIO4Net.Client.0.6.26/lib/net40/WebSocket4Net.dll" />
+    <property name="RiderNuGetCacheManager.AutoClear.http-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.packages-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.global-packages" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="prog&#9;FILE&#9;file://C:/Users/Espadan/Documents/Visual Studio 2012/Projects/LandFightBotReborn/LandFightBotReborn/Program.cs&#10;Bot&#9;FILE&#9;file://C:/Users/Espadan/Documents/Visual Studio 2012/Projects/LandFightBotReborn/LandFightBotReborn/Bot/BotManager.cs&#10;bo&#9;FILE&#9;file://C:/Users/Espadan/Documents/Visual Studio 2012/Projects/LandFightBotReborn/LandFightBotReborn/Bot/BotManager.cs&#10;nug&#9;ACTION&#9;ActivateNuGetToolWindow&#10;nuge&#9;ACTION&#9;ActivateNuGetToolWindow" />
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../../LandFightBotReborn/LandFightBotReborn.csproj" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="Default" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../LandFightBotReborn/bin/Debug/LandFightBotReborn.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../LandFightBotReborn/bin/Debug" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17dfa2ac-af07-4950-97ca-70db9606a126" name="Default" comment="" />
+      <created>1479826774393</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1479826774393</updated>
+      <workItem from="1479826775650" duration="4764000" />
+      <workItem from="1479842776428" duration="4640000" />
+      <workItem from="1479930850730" duration="9958000" />
+      <workItem from="1479976643519" duration="598000" />
+      <workItem from="1479979701059" duration="5266000" />
+      <workItem from="1480166798145" duration="7376000" />
+      <workItem from="1480188165746" duration="286000" />
+      <workItem from="1480269758225" duration="7664000" />
+      <workItem from="1480277958349" duration="49000" />
+      <workItem from="1480278310355" duration="5360000" />
+      <workItem from="1480341801704" duration="257000" />
+      <workItem from="1480494822963" duration="988000" />
+      <workItem from="1480497204543" duration="273000" />
+      <workItem from="1481579260291" duration="663000" />
+      <workItem from="1481580127684" duration="500000" />
+    </task>
+    <task id="LOCAL-00001" summary="changing in structure and refactoring the unitController and BotManager some syntax  error exist">
+      <created>1480173834268</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1480173834268</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Need test">
+      <created>1480342033103</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1480342033103</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="48642000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-772" y="711" width="1840" height="1092" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12349067" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.4143798" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33193716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5856202" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33298647" sideWeight="0.3572997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changing in structure and refactoring the unitController and BotManager some syntax  error exist" />
+    <MESSAGE value="Need test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Need test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/BotManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameStatus.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/UnitController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <marker date="1480515448991" expanded="true" signature="6:108" ph="..." />
+            <marker date="1480515448991" expanded="true" signature="151:10558" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="185:10556" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="701:1433" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="1470:1737" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="1775:2116" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="2167:2520" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="2559:4097" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="4107:4426" ph="///   It is called when current unit is hitted ... " />
+            <marker date="1480515448991" expanded="true" signature="4493:5153" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="4907:5048" ph="/* commander id = 7! ... */" />
+            <marker date="1480515448991" expanded="true" signature="5199:5375" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5424:5513" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5424:5925" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5447:5500" ph="/* if (!abilityGain.Contains(ability)) ... */" />
+            <marker date="1480515448991" expanded="true" signature="5973:6476" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="6525:6902" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="6777:6892" ph="/* if (abilityGain.Contains(ability)) ... */" />
+            <marker date="1480515448991" expanded="true" signature="6954:7240" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7250:7382" ph="///   It gives yu the shots which are avaible each turn ... " />
+            <marker date="1480515448991" expanded="true" signature="7421:7496" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7506:7584" ph="///   It must be called each turn ... " />
+            <marker date="1480515448991" expanded="true" signature="7617:7666" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7785:7922" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7950:8114" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8150:8201" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8252:8314" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8359:8415" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8458:8507" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8566:8651" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8698:8756" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8788:8834" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8913:9956" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="9854:9956" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="10008:10194" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="10266:10550" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1617">
+          <caret line="77" column="25" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="25" />
+          <folding>
+            <marker date="1480498420328" expanded="true" signature="6:125" ph="..." />
+            <marker date="1480498420328" expanded="true" signature="6:157" ph="..." />
+            <marker date="1480498420328" expanded="true" signature="200:7597" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="224:7595" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="340:1601" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1011:1212" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1316:1591" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1631:2336" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1792:2096" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2158:2280" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2310:2326" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2345:2470" ph="/// It indicates user current card if one card is not in list it is not included ... " />
+            <marker date="1480498420328" expanded="true" signature="2666:2789" ph="/// For retriving game after dc we must fill this part it also have game rules ... " />
+            <marker date="1480498420328" expanded="true" signature="2937:3109" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3149:3201" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3263:3511" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3563:3627" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3674:3732" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3816:3904" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3942:4100" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4138:4296" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4334:4498" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4540:4700" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4734:4783" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4844:4889" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4899:5145" ph="/// When player reconnects ... " />
+            <marker date="1480498420328" expanded="true" signature="5234:5366" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="5419:5918" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6057:6378" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6057:7595" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6424:6642" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6652:6737" ph="/// It updates features from playerCards ... " />
+            <marker date="1480498420328" expanded="true" signature="6781:7417" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="7454:7503" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="7540:7589" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameDataTypes.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding>
+            <marker date="1480520288814" expanded="true" signature="6:174" ph="..." />
+            <marker date="1480520288814" expanded="true" signature="204:860" ph="{...}" />
+            <marker date="1480520288814" expanded="true" signature="231:858" ph="{...}" />
+            <marker date="1480520288814" expanded="true" signature="448:764" ph="{...}" />
+            <marker date="1480520288814" expanded="true" signature="805:852" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Constants.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3360">
+          <caret line="160" column="30" selection-start-line="160" selection-start-column="30" selection-end-line="160" selection-end-column="30" />
+          <folding>
+            <marker date="1480522022737" expanded="true" signature="6:115" ph="..." />
+            <marker date="1480522022737" expanded="true" signature="145:14666" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="174:14664" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="272:3509" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="754:3499" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1090:1216" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1339:1665" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1730:2054" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="2122:2444" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="2522:3076" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="3094:3485" ph="/* public static bool limitedAbilsContains(int unitId) ... */" />
+            <marker date="1480522022737" expanded="true" signature="3710:3833" ph="/* public static string GAME_URL = &quot;http://192.168.137.1/&quot;; ... */" />
+            <marker date="1480522022737" expanded="true" signature="3869:4060" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4167:4706" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4190:4332" ph="/* TODO We need device id to login ... */" />
+            <marker date="1480522022737" expanded="true" signature="4373:4696" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4804:5295" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4876:4934" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4976:5285" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5342:5785" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5569:5775" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5933:6072" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6013:6061" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6113:6928" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6343:6597" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6643:6918" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6969:9167" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7296:7549" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7599:7856" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7898:8100" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="8141:9157" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="8372:9143" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="9204:9679" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="9716:9994" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10036:14658" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10086:11719" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10824:10969" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="11732:11902" ph="/* Start game is in handsahke mode server says i'm ready then client says that and after these two things ... */" />
+            <marker date="1480522022737" expanded="true" signature="11941:14648" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="12380:12476" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="13383:13612" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/BotManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameStatus.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/UnitController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <marker date="1480515448991" expanded="true" signature="6:108" ph="..." />
+            <marker date="1480515448991" expanded="true" signature="151:10558" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="185:10556" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="701:1433" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="1470:1737" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="1775:2116" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="2167:2520" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="2559:4097" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="4107:4426" ph="///   It is called when current unit is hitted ... " />
+            <marker date="1480515448991" expanded="true" signature="4493:5153" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="4907:5048" ph="/* commander id = 7! ... */" />
+            <marker date="1480515448991" expanded="true" signature="5199:5375" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5424:5513" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5424:5925" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5447:5500" ph="/* if (!abilityGain.Contains(ability)) ... */" />
+            <marker date="1480515448991" expanded="true" signature="5973:6476" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="6525:6902" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="6777:6892" ph="/* if (abilityGain.Contains(ability)) ... */" />
+            <marker date="1480515448991" expanded="true" signature="6954:7240" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7250:7382" ph="///   It gives yu the shots which are avaible each turn ... " />
+            <marker date="1480515448991" expanded="true" signature="7421:7496" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7506:7584" ph="///   It must be called each turn ... " />
+            <marker date="1480515448991" expanded="true" signature="7617:7666" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7785:7922" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7950:8114" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8150:8201" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8252:8314" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8359:8415" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8458:8507" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8566:8651" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8698:8756" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8788:8834" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8913:9956" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="9854:9956" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="10008:10194" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="10266:10550" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1617">
+          <caret line="77" column="25" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="25" />
+          <folding>
+            <marker date="1480498420328" expanded="true" signature="6:125" ph="..." />
+            <marker date="1480498420328" expanded="true" signature="6:157" ph="..." />
+            <marker date="1480498420328" expanded="true" signature="200:7597" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="224:7595" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="340:1601" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1011:1212" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1316:1591" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1631:2336" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1792:2096" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2158:2280" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2310:2326" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2345:2470" ph="/// It indicates user current card if one card is not in list it is not included ... " />
+            <marker date="1480498420328" expanded="true" signature="2666:2789" ph="/// For retriving game after dc we must fill this part it also have game rules ... " />
+            <marker date="1480498420328" expanded="true" signature="2937:3109" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3149:3201" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3263:3511" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3563:3627" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3674:3732" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3816:3904" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3942:4100" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4138:4296" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4334:4498" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4540:4700" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4734:4783" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4844:4889" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4899:5145" ph="/// When player reconnects ... " />
+            <marker date="1480498420328" expanded="true" signature="5234:5366" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="5419:5918" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6057:6378" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6057:7595" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6424:6642" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6652:6737" ph="/// It updates features from playerCards ... " />
+            <marker date="1480498420328" expanded="true" signature="6781:7417" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="7454:7503" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="7540:7589" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameDataTypes.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding>
+            <marker date="1480520288814" expanded="true" signature="6:174" ph="..." />
+            <marker date="1480520288814" expanded="true" signature="204:860" ph="{...}" />
+            <marker date="1480520288814" expanded="true" signature="231:858" ph="{...}" />
+            <marker date="1480520288814" expanded="true" signature="448:764" ph="{...}" />
+            <marker date="1480520288814" expanded="true" signature="805:852" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Constants.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3360">
+          <caret line="160" column="30" selection-start-line="160" selection-start-column="30" selection-end-line="160" selection-end-column="30" />
+          <folding>
+            <marker date="1480522022737" expanded="true" signature="6:115" ph="..." />
+            <marker date="1480522022737" expanded="true" signature="145:14666" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="174:14664" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="272:3509" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="754:3499" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1090:1216" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1339:1665" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1730:2054" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="2122:2444" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="2522:3076" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="3094:3485" ph="/* public static bool limitedAbilsContains(int unitId) ... */" />
+            <marker date="1480522022737" expanded="true" signature="3710:3833" ph="/* public static string GAME_URL = &quot;http://192.168.137.1/&quot;; ... */" />
+            <marker date="1480522022737" expanded="true" signature="3869:4060" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4167:4706" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4190:4332" ph="/* TODO We need device id to login ... */" />
+            <marker date="1480522022737" expanded="true" signature="4373:4696" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4804:5295" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4876:4934" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4976:5285" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5342:5785" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5569:5775" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5933:6072" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6013:6061" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6113:6928" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6343:6597" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6643:6918" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6969:9167" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7296:7549" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7599:7856" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7898:8100" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="8141:9157" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="8372:9143" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="9204:9679" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="9716:9994" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10036:14658" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10086:11719" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10824:10969" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="11732:11902" ph="/* Start game is in handsahke mode server says i'm ready then client says that and after these two things ... */" />
+            <marker date="1480522022737" expanded="true" signature="11941:14648" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="12380:12476" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="13383:13612" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/BotManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Network/MultiplayerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7896">
+          <caret line="376" column="22" selection-start-line="376" selection-start-column="22" selection-end-line="376" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Utils/Converter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Network/HttpManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2331">
+          <caret line="111" column="12" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
+          <folding>
+            <marker date="1480498420328" expanded="true" signature="6:125" ph="..." />
+            <marker date="1480498420328" expanded="true" signature="6:157" ph="..." />
+            <marker date="1480498420328" expanded="true" signature="200:7597" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="224:7595" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="340:1601" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1011:1212" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1316:1591" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1631:2336" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1792:2096" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2158:2280" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2310:2326" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2345:2470" ph="/// It indicates user current card if one card is not in list it is not included ... " />
+            <marker date="1480498420328" expanded="true" signature="2666:2789" ph="/// For retriving game after dc we must fill this part it also have game rules ... " />
+            <marker date="1480498420328" expanded="true" signature="2937:3109" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3149:3201" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3263:3511" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3563:3627" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3674:3732" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3816:3904" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3942:4100" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4138:4296" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4334:4498" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4540:4700" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4734:4783" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4844:4889" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4899:5145" ph="/// When player reconnects ... " />
+            <marker date="1480498420328" expanded="true" signature="5234:5366" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="5419:5918" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6057:6378" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6057:7595" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6424:6642" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6652:6737" ph="/// It updates features from playerCards ... " />
+            <marker date="1480498420328" expanded="true" signature="6781:7417" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="7454:7503" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="7540:7589" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/BotManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Constants.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+          <folding>
+            <marker date="1480522022737" expanded="true" signature="6:115" ph="..." />
+            <marker date="1480522022737" expanded="true" signature="145:14666" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="174:14664" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="272:3509" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="754:3499" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1090:1216" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1339:1665" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1730:2054" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="2122:2444" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="2522:3076" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="3094:3485" ph="/* public static bool limitedAbilsContains(int unitId) ... */" />
+            <marker date="1480522022737" expanded="true" signature="3710:3833" ph="/* public static string GAME_URL = &quot;http://192.168.137.1/&quot;; ... */" />
+            <marker date="1480522022737" expanded="true" signature="3869:4060" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4167:4706" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4190:4332" ph="/* TODO We need device id to login ... */" />
+            <marker date="1480522022737" expanded="true" signature="4373:4696" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4804:5295" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4876:4934" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4976:5285" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5342:5785" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5569:5775" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5933:6072" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6013:6061" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6113:6928" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6343:6597" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6643:6918" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6969:9167" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7296:7549" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7599:7856" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7898:8100" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="8141:9157" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="8372:9143" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="9204:9679" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="9716:9994" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10036:14658" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10086:11719" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10824:10969" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="11732:11902" ph="/* Start game is in handsahke mode server says i'm ready then client says that and after these two things ... */" />
+            <marker date="1480522022737" expanded="true" signature="11941:14648" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="12380:12476" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="13383:13612" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/DB/UnitManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/UnitController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1480515448991" expanded="true" signature="6:108" ph="..." />
+            <marker date="1480515448991" expanded="true" signature="151:10558" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="185:10556" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="701:1433" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="1470:1737" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="1775:2116" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="2167:2520" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="2559:4097" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="4107:4426" ph="///   It is called when current unit is hitted ... " />
+            <marker date="1480515448991" expanded="true" signature="4493:5153" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="4907:5048" ph="/* commander id = 7! ... */" />
+            <marker date="1480515448991" expanded="true" signature="5199:5375" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5424:5513" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5424:5925" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5447:5500" ph="/* if (!abilityGain.Contains(ability)) ... */" />
+            <marker date="1480515448991" expanded="true" signature="5973:6476" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="6525:6902" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="6777:6892" ph="/* if (abilityGain.Contains(ability)) ... */" />
+            <marker date="1480515448991" expanded="true" signature="6954:7240" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7250:7382" ph="///   It gives yu the shots which are avaible each turn ... " />
+            <marker date="1480515448991" expanded="true" signature="7421:7496" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7506:7584" ph="///   It must be called each turn ... " />
+            <marker date="1480515448991" expanded="true" signature="7617:7666" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7785:7922" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7950:8114" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8150:8201" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8252:8314" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8359:8415" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8458:8507" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8566:8651" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8698:8756" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8788:8834" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8913:9956" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="9854:9956" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="10008:10194" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="10266:10550" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameDataTypes.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameStatus.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Properties/AssemblyInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Bot4.zip/landfightbot/Bot/DataType/Unit.cs" />
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/BD5F7037-65C4-4C44-8FBC-F45D80D7550F/e5/bf206200/WebClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="989" column="51" selection-start-line="989" selection-start-column="51" selection-end-line="989" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/LandFightBotReborn.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="4" column="79" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/MSBuild/14.0/Bin/Microsoft.Common.CurrentVersion.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="3812" column="4" selection-start-line="3812" selection-start-column="4" selection-end-line="3812" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/AI/AIBasic.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/AI/AI1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-819">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/BotManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40089">
+          <caret line="1909" column="1" selection-start-line="1909" selection-start-column="1" selection-end-line="1909" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/Ability.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameDataTypes.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/GameStatus.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/DB/UpgradeRuleManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Network/HttpManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Network/MultiplayerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14574">
+          <caret line="694" column="0" selection-start-line="694" selection-start-column="0" selection-end-line="694" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Utils/Converter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1479842780609" expanded="true" signature="6:115" ph="..." />
+            <marker date="1479842780609" expanded="true" signature="151:341" ph="{...}" />
+            <marker date="1479842780609" expanded="true" signature="180:339" ph="{...}" />
+            <marker date="1479842780609" expanded="true" signature="246:333" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Utils/Logger.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1480514305296" expanded="true" signature="6:143" ph="..." />
+            <marker date="1480514305296" expanded="true" signature="179:759" ph="{...}" />
+            <marker date="1480514305296" expanded="true" signature="205:757" ph="{...}" />
+            <marker date="1480514305296" expanded="true" signature="352:569" ph="{...}" />
+            <marker date="1480514305296" expanded="true" signature="616:751" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Utils/Vector2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1480504076884" expanded="true" signature="6:115" ph="..." />
+            <marker date="1480504076884" expanded="true" signature="151:358" ph="{...}" />
+            <marker date="1480504076884" expanded="true" signature="178:356" ph="{...}" />
+            <marker date="1480504076884" expanded="true" signature="282:350" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Constants.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6615">
+          <caret line="315" column="31" selection-start-line="315" selection-start-column="31" selection-end-line="315" selection-end-column="31" />
+          <folding>
+            <marker date="1480522022737" expanded="true" signature="6:115" ph="..." />
+            <marker date="1480522022737" expanded="true" signature="145:14666" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="174:14664" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="272:3509" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="754:3499" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1090:1216" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1339:1665" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="1730:2054" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="2122:2444" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="2522:3076" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="3094:3485" ph="/* public static bool limitedAbilsContains(int unitId) ... */" />
+            <marker date="1480522022737" expanded="true" signature="3710:3833" ph="/* public static string GAME_URL = &quot;http://192.168.137.1/&quot;; ... */" />
+            <marker date="1480522022737" expanded="true" signature="3869:4060" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4167:4706" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4190:4332" ph="/* TODO We need device id to login ... */" />
+            <marker date="1480522022737" expanded="true" signature="4373:4696" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4804:5295" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4876:4934" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="4976:5285" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5342:5785" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5569:5775" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="5933:6072" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6013:6061" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6113:6928" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6343:6597" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6643:6918" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="6969:9167" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7296:7549" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7599:7856" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="7898:8100" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="8141:9157" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="8372:9143" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="9204:9679" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="9716:9994" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10036:14658" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10086:11719" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="10824:10969" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="11732:11902" ph="/* Start game is in handsahke mode server says i'm ready then client says that and after these two things ... */" />
+            <marker date="1480522022737" expanded="true" signature="11941:14648" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="12380:12476" ph="{...}" />
+            <marker date="1480522022737" expanded="true" signature="13383:13612" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1480520288814" expanded="true" signature="6:174" ph="..." />
+            <marker date="1480520288814" expanded="true" signature="204:860" ph="{...}" />
+            <marker date="1480520288814" expanded="true" signature="231:858" ph="{...}" />
+            <marker date="1480520288814" expanded="true" signature="448:764" ph="{...}" />
+            <marker date="1480520288814" expanded="true" signature="805:852" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/packages.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/App.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Utils/Vector4.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <marker date="1480504496585" expanded="true" signature="6:115" ph="..." />
+            <marker date="1480504496585" expanded="true" signature="151:461" ph="{...}" />
+            <marker date="1480504496585" expanded="true" signature="178:459" ph="{...}" />
+            <marker date="1480504496585" expanded="true" signature="337:453" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/DB/SQLManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1481580597417" expanded="true" signature="6:133" ph="..." />
+            <marker date="1481580597417" expanded="true" signature="173:229" ph="/// By M.Fakhreddin ... " />
+            <marker date="1481580597417" expanded="true" signature="257:3159" ph="{...}" />
+            <marker date="1481580597417" expanded="true" signature="600:644" ph="{...}" />
+            <marker date="1481580597417" expanded="true" signature="677:1514" ph="{...}" />
+            <marker date="1481580597417" expanded="true" signature="1524:1604" ph="/// It executes the orders directly ... " />
+            <marker date="1481580597417" expanded="true" signature="1652:2077" ph="{...}" />
+            <marker date="1481580597417" expanded="true" signature="2144:2640" ph="{...}" />
+            <marker date="1481580597417" expanded="true" signature="2650:2729" ph="/// Clean up everything for SQLite ... " />
+            <marker date="1481580597417" expanded="true" signature="2764:3153" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/DB/UnitManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+          <folding>
+            <marker date="1481580578367" expanded="true" signature="6:266" ph="..." />
+            <marker date="1481580578367" expanded="true" signature="299:13018" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="306:497" ph="/// By M.Hooshdar M.Fakhreddin ... " />
+            <marker date="1481580578367" expanded="true" signature="527:4313" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="2114:3253" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="3308:3549" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="3586:4307" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="4318:4385" ph="/// By M.Hooshdar M.Fakhreddin ... " />
+            <marker date="1481580578367" expanded="true" signature="4414:13015" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="6671:6827" ph="/* private const string UNIT_NUMBER_OF_STATE_IMAGES = &quot;numberOfStateImages&quot;; ... */" />
+            <marker date="1481580578367" expanded="true" signature="7056:7214" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="7249:9480" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="9236:9397" ph="/* SEPARATOR + ... */" />
+            <marker date="1481580578367" expanded="true" signature="9530:9742" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="9775:12897" ph="{...}" />
+            <marker date="1481580578367" expanded="true" signature="12961:13008" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <marker date="1480498420328" expanded="true" signature="6:125" ph="..." />
+            <marker date="1480498420328" expanded="true" signature="6:157" ph="..." />
+            <marker date="1480498420328" expanded="true" signature="200:7597" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="224:7595" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="340:1601" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1011:1212" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1316:1591" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1631:2336" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="1792:2096" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2158:2280" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2310:2326" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="2345:2470" ph="/// It indicates user current card if one card is not in list it is not included ... " />
+            <marker date="1480498420328" expanded="true" signature="2666:2789" ph="/// For retriving game after dc we must fill this part it also have game rules ... " />
+            <marker date="1480498420328" expanded="true" signature="2937:3109" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3149:3201" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3263:3511" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3563:3627" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3674:3732" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3816:3904" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="3942:4100" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4138:4296" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4334:4498" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4540:4700" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4734:4783" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4844:4889" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="4899:5145" ph="/// When player reconnects ... " />
+            <marker date="1480498420328" expanded="true" signature="5234:5366" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="5419:5918" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6057:6378" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6057:7595" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6424:6642" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="6652:6737" ph="/// It updates features from playerCards ... " />
+            <marker date="1480498420328" expanded="true" signature="6781:7417" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="7454:7503" ph="{...}" />
+            <marker date="1480498420328" expanded="true" signature="7540:7589" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LandFightBotReborn/Bot/DataType/UnitController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <marker date="1480515448991" expanded="true" signature="6:108" ph="..." />
+            <marker date="1480515448991" expanded="true" signature="151:10558" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="185:10556" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="701:1433" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="1470:1737" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="1775:2116" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="2167:2520" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="2559:4097" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="4107:4426" ph="///   It is called when current unit is hitted ... " />
+            <marker date="1480515448991" expanded="true" signature="4493:5153" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="4907:5048" ph="/* commander id = 7! ... */" />
+            <marker date="1480515448991" expanded="true" signature="5199:5375" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5424:5513" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5424:5925" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="5447:5500" ph="/* if (!abilityGain.Contains(ability)) ... */" />
+            <marker date="1480515448991" expanded="true" signature="5973:6476" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="6525:6902" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="6777:6892" ph="/* if (abilityGain.Contains(ability)) ... */" />
+            <marker date="1480515448991" expanded="true" signature="6954:7240" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7250:7382" ph="///   It gives yu the shots which are avaible each turn ... " />
+            <marker date="1480515448991" expanded="true" signature="7421:7496" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7506:7584" ph="///   It must be called each turn ... " />
+            <marker date="1480515448991" expanded="true" signature="7617:7666" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7785:7922" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="7950:8114" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8150:8201" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8252:8314" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8359:8415" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8458:8507" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8566:8651" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8698:8756" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8788:8834" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="8913:9956" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="9854:9956" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="10008:10194" ph="{...}" />
+            <marker date="1480515448991" expanded="true" signature="10266:10550" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
